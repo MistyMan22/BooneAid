@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "42a69c9d8ee7f0cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1081c398d9b36bc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Raw Tasks.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "a32ae3f5edb8d48d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ba3.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "8dc1858bcf67a425",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ex2.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "5d7697e930bcede6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ex1.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e2f5f81058df3188",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6a0a2e47c3ce252",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1732ad23eafb8adf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "97545f17c65061be",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5e2df8a7841adc93",
+    "type": "split",
+    "children": [
+      {
+        "id": "9652b6552df2d790",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e4f7efee9b31ed8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ex2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8dc1858bcf67a425",
+  "lastOpenFiles": [
+    "ex2.md",
+    "ba3.md",
+    "Templates/External Dependency.md",
+    "ex1.md",
+    "Templates/Task.md",
+    "Raw Tasks.md",
+    "ba1.md",
+    "ba2.md",
+    "BA Core.md",
+    "BooneAidRoot.md"
+  ]
+}

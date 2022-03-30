@@ -1,0 +1,4 @@
+- [x] [[ba1]] Set up local git repo
+- [x] [[ba2]] Initialize jftw
+- [ ] [[ba3]] start express app
+- [ ] Set up remote git repo
