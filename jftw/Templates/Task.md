@@ -1,5 +1,7 @@
 **ID:**
 **Text:**
+**Description:**
+**Acceptance Test:**
 **Date Created:** {{date}}
 **Time Created:** {{time}}
 **Contributors:** [[Will]]
@@ -8,5 +10,4 @@
 **Value:** %calculated%
 **Supports:**
 **Supported By:**
-- [x] [[Task]]
 **Notes:**

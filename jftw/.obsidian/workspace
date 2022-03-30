@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "b1081c398d9b36bc",
+        "id": "57809b1fc5a29c49",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -15,34 +15,23 @@
         }
       },
       {
-        "id": "a32ae3f5edb8d48d",
+        "id": "4c86eed84894f75a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ba3.md",
+            "file": "ba11.md",
             "mode": "source"
           }
         }
       },
       {
-        "id": "8dc1858bcf67a425",
+        "id": "667048045a273d5c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ex2.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "5d7697e930bcede6",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ex1.md",
+            "file": "ba10.md",
             "mode": "source"
           }
         }
@@ -101,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ex2.md",
+                "file": "ba11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8dc1858bcf67a425",
+  "active": "4c86eed84894f75a",
   "lastOpenFiles": [
-    "ex2.md",
-    "ba3.md",
-    "Templates/External Dependency.md",
-    "ex1.md",
-    "Templates/Task.md",
+    "ba11.md",
     "Raw Tasks.md",
-    "ba1.md",
-    "ba2.md",
-    "BA Core.md",
-    "BooneAidRoot.md"
+    "ba10.md",
+    "ex1.md",
+    "ba8.md",
+    "ba6.md",
+    "ba5.md",
+    "dd1.md",
+    "Templates/External Dependency.md",
+    "Templates/Design Document.md"
   ]
 }
