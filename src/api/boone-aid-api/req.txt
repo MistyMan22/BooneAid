@@ -1,0 +1,1 @@
+{"name": "App Family Medicine", "description": "where families practice medicine", "picture": "picture", "link": "link.com", "email": "family@appfamily.com", "phone": "704-867-5309"}

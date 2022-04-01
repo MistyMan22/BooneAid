@@ -6,11 +6,10 @@
 	- [x] [[ba6]] Create Resource design document
 	- [x] [[ba7]] Get Mongoose set up
 	- [x] [[ba8]] Implement ResourceSchema
-- [ ] [[ba9]] load up a few example resources
+- [x] [[ba9]] load up a few example resources
 	- [x] [[ba10]] implement the resource routes
-	- [ ] [[ba11]] implement the resource controller POST method
-	- [ ] create a script to load in some example resources
-	- [ ] use curl (or similar) to test API endpoints
+	- [x] [[ba11]] implement the resource controller POST method
+	- [x] [[ba12]] create a script to load in some example resources
 - [ ] Create basic resource view
 	- [ ] create a react application
 	- [ ] create a component that can display a resource
@@ -32,3 +31,11 @@
 	- [ ] ...
 	- [ ] ...
 - [ ] Assess MVP
+
+Unprioritized
+- hook up a linter
+	- make it do two space tabs
+	- change the VS code settings to do two page tabs
+- test harness
+	- create a set of tests that test the API endpoints
+	- all subsequent tasks should require tests

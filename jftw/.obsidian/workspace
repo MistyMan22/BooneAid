@@ -15,23 +15,23 @@
         }
       },
       {
-        "id": "4c86eed84894f75a",
+        "id": "51d5dadceb52b6e3",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ba11.md",
+            "file": "ba9.md",
             "mode": "source"
           }
         }
       },
       {
-        "id": "667048045a273d5c",
+        "id": "5e6f656586d50abb",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ba10.md",
+            "file": "ba12.md",
             "mode": "source"
           }
         }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ba11.md",
+                "file": "Raw Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4c86eed84894f75a",
+  "active": "57809b1fc5a29c49",
   "lastOpenFiles": [
-    "ba11.md",
     "Raw Tasks.md",
+    "ba9.md",
+    "ba12.md",
+    "ba11.md",
     "ba10.md",
     "ex1.md",
     "ba8.md",
     "ba6.md",
     "ba5.md",
-    "dd1.md",
-    "Templates/External Dependency.md",
-    "Templates/Design Document.md"
+    "dd1.md"
   ]
 }
