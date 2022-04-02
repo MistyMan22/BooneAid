@@ -10,7 +10,8 @@
 	- [x] [[ba10]] implement the resource routes
 	- [x] [[ba11]] implement the resource controller POST method
 	- [x] [[ba12]] create a script to load in some example resources
-- [ ] Create basic resource view
+- [ ] [[ba13]] Create basic resource view
+	- [ ] [[ba14]] complete mozilla react tutorial
 	- [ ] create a react application
 	- [ ] create a component that can display a resource
 - [ ] Implement Initial UI
