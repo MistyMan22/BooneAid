@@ -10,24 +10,42 @@
 	- [x] [[ba10]] implement the resource routes
 	- [x] [[ba11]] implement the resource controller POST method
 	- [x] [[ba12]] create a script to load in some example resources
-- [ ] [[ba13]] Create basic resource view
-	- [ ] [[ba14]] complete mozilla react tutorial
-	- [ ] create a react application
-	- [ ] create a component that can display a resource
-- [ ] Implement Initial UI
-	- [ ] Wireframe a few pages
-		- [ ] resource display
-		- [ ] home page
-		- [ ] about page
-		- [ ] contact page
-		- [ ] search page
-	- [ ] make plan for react architecture
-		- [ ] make list of components and what they will display
-		- [ ] define initial utility classes
-		- [ ] figure out routing
+- [ ] [[ba13]] Plan UI
+	- [x] [[ba14]] complete mozilla react tutorial
+	- [x] [[ba15]] create a react application in the ui folder
+	- [x] [[ba16]] outline basic structure of the site
+		- [x] [[ba17]] rough wireframe
+		- [x] [[ba18]] make a list of components that the basic site will need
+		- [x] [[ba19]] refine tasks for UI implementation
+		- [x] [[ba21]] figure out page routing
+			- [x] [[ba22]] do page routing tutorial
+- [ ] [[ba20]] Implement Initial UI
+	- [ ] Implement Root Page Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Menu Bar Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Content Section Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Search Area Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Results Area Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Result Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement Selected Resource Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+	- [ ] Implement About Page Component
+		- [ ] Rough Wireframe
+		- [ ] Implement
+- [ ] Hook up to the back end
 	- [ ] implement API call utils
-	- [ ] implement page structure
-	- [ ] implement improved resource object
 - [ ] Implement search
 	- [ ] ...
 	- [ ] ...
@@ -40,3 +58,4 @@ Unprioritized
 - test harness
 	- create a set of tests that test the API endpoints
 	- all subsequent tasks should require tests
+- refinement, refine task list, prioritize

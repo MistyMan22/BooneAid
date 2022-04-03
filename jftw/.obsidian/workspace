@@ -10,28 +10,28 @@
           "type": "markdown",
           "state": {
             "file": "Raw Tasks.md",
-            "mode": "preview"
-          }
-        }
-      },
-      {
-        "id": "f7b390bbbffd0271",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ba14.md",
             "mode": "source"
           }
         }
       },
       {
-        "id": "2377bd491516c5c2",
+        "id": "dc5db01fd6e92529",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ex6.md",
+            "file": "ba22.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "65c4d55be8140335",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ba21.md",
             "mode": "source"
           }
         }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ba14.md",
+                "file": "Raw Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f7b390bbbffd0271",
+  "active": "57809b1fc5a29c49",
   "lastOpenFiles": [
-    "ba14.md",
-    "ex6.md",
     "Raw Tasks.md",
-    "ba9.md",
-    "ba12.md",
-    "ba11.md",
-    "ba10.md",
-    "ex1.md",
-    "ba8.md",
-    "ba6.md"
+    "ba21.md",
+    "ba22.md",
+    "ex7.md",
+    "ba19.md",
+    "dd2.md",
+    "ba18.md",
+    "ba17.md",
+    "ba16.md",
+    "ex3.md"
   ]
 }
