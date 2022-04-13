@@ -1,0 +1,33 @@
+#menu-bar {
+  height: 35px;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+}
+
+#home-button {
+  width: 69px;
+  height: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-button:hover {
+  background-color: lightgray;
+}
+
+#about-button {
+  width: 69px;
+  height: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-button:hover {
+  background-color: lightgray;
+}

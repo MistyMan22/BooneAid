@@ -10,7 +10,7 @@
 	- [x] [[ba10]] implement the resource routes
 	- [x] [[ba11]] implement the resource controller POST method
 	- [x] [[ba12]] create a script to load in some example resources
-- [ ] [[ba13]] Plan UI
+- [x] [[ba13]] Plan UI
 	- [x] [[ba14]] complete mozilla react tutorial
 	- [x] [[ba15]] create a react application in the ui folder
 	- [x] [[ba16]] outline basic structure of the site
@@ -20,12 +20,13 @@
 		- [x] [[ba21]] figure out page routing
 			- [x] [[ba22]] do page routing tutorial
 - [ ] [[ba20]] Implement Initial UI
-	- [ ] Implement Root Page Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
-	- [ ] Implement Menu Bar Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
+	- [x] [[ba23]] Implement Root Page Component
+		- [x] [[ba24]] Rough Wireframe
+		- [x] [[ba25]] Implement
+			- [x] [[ba26]] strip app down to bare essentials
+			- [x] [[ba27]] make it display "Welcome to Boone-Aid"
+			- [x] [[ba28]] put a border around the root div in the component that proves it takes up the whole page
+	- [ ] [[ba29]] Implement Menu Bar Component
 	- [ ] Implement Content Section Component
 		- [ ] Rough Wireframe
 		- [ ] Implement
