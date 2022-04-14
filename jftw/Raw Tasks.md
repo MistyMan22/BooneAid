@@ -26,10 +26,10 @@
 			- [x] [[ba26]] strip app down to bare essentials
 			- [x] [[ba27]] make it display "Welcome to Boone-Aid"
 			- [x] [[ba28]] put a border around the root div in the component that proves it takes up the whole page
-	- [ ] [[ba29]] Implement Menu Bar Component
-	- [ ] Implement Content Section Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
+	- [x] [[ba29]] Implement Menu Bar Component
+	- [x] [[ba30]] Implement Content Section Component
+		- [x] [[ba31]] Rough Wireframe
+		- [x] [[ba32]] Implement
 	- [ ] Implement Search Area Component
 		- [ ] Rough Wireframe
 		- [ ] Implement

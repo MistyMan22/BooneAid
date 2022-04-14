@@ -1,14 +1,13 @@
 import React from "react";
-import './RootPage.css'
+import './RootPage.css';
 import MenuBar from "../MenuBar/MenuBar";
+import ContentContainer from "../ContentContainer/ContentContainer";
 
 export default function RootPage() {
   return (
     <div className="root-page">
       <MenuBar/>
-      <header className="root-header">
-        Welcome to Boone-Aid
-      </header>
+      <ContentContainer/>
     </div>
   );
 }

@@ -15,12 +15,12 @@
         }
       },
       {
-        "id": "fe41d94cc8c8d6a4",
+        "id": "f029bcd74c54cb66",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ba29.md",
+            "file": "ba32.md",
             "mode": "source"
           }
         }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ba29.md",
+                "file": "ba32.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "fe41d94cc8c8d6a4",
+  "active": "f029bcd74c54cb66",
   "lastOpenFiles": [
-    "ba29.md",
+    "ba32.md",
     "Raw Tasks.md",
+    "ba31.md",
+    "ba30.md",
+    "ba29.md",
     "ba25.md",
     "ba24.md",
     "new task.md",
     "ba20.md",
-    "ex7.md",
-    "ba22.md",
-    "ba23.md",
-    "Will.md"
+    "ex7.md"
   ]
 }
