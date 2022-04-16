@@ -1,15 +1,19 @@
-import React from 'react'
-import './MenuBar.css'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import './MenuBar.css';
 
 export default function MenuBar() {
   return (
-    <div id="menu-bar">
-      <div id="home-button">
-        Home
+    <nav id="menu-bar">
+      <div className='menu-button'>
+        <Link to='/'>Home</Link>
       </div>
-      <div id="about-button">
-        About
+      <div className='menu-button'>
+        <Link to='about'>About</Link>
       </div>
-    </div>
+      <div className='menu-button'>
+        <Link to='resources'>Resources</Link>
+      </div>
+    </nav>
   );
 }

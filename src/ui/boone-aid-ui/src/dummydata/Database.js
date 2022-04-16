@@ -1,8 +1,11 @@
+import {nanoid} from 'nanoid';
+
 // defines an age range 
 class AgeRange {
   constructor(lower, upper) {
     this.lower = lower;
     this.upper = upper;
+    this.id = 'age-range-' + nanoid();
   }
 
   toString() {
@@ -14,6 +17,7 @@ class AgeRange {
 class Gender {
   constructor(name) {
     this.name = name;
+    this.id = 'gender-' + nanoid();
   }
 
   toString() {
@@ -31,6 +35,7 @@ class Resource {
     this.email = email;
     this.phone = phone;
     this.attributes = attributes;
+    this.id = 'resource-' + nanoid();
   }
 }
 

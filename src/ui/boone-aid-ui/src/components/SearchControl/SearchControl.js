@@ -29,13 +29,13 @@ export default function SearchControl() {
         <div className="select-container">
           <label className="select-label">Gender </label>
           <select className="filter-select" id="gender-select" name="gender">
-            {genders.map((gender) => (<option>{gender.name}</option>))}
+            {genders.map((gender) => (<option key={gender.id}>{gender.name}</option>))}
           </select>
         </div>
         <div className="select-container">
           <label className="select-label">Age </label>
           <select className="filter-select" id="age-select" name="age">
-            {ageRanges.map((age) => (<option>{age}</option>))}
+            {ageRanges.map((age) => (<option key={age.id}>{age}</option>))}
           </select>
         </div>
       </div>

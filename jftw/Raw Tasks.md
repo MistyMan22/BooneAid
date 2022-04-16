@@ -30,21 +30,10 @@
 	- [x] [[ba30]] Implement Content Section Component
 		- [x] [[ba31]] Rough Wireframe
 		- [x] [[ba32]] Implement
-	- [ ] Implement Search Area Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
-	- [ ] Implement Results Area Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
-	- [ ] Implement Result Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
-	- [ ] Implement Selected Resource Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
-	- [ ] Implement About Page Component
-		- [ ] Rough Wireframe
-		- [ ] Implement
+	- [x] [[ba33]] Implement Search Area Component
+		- [x] [[ba34]] Rough Wireframe
+		- [x] [[ba35]] Implement
+	- [ ] [[ba36]] finish site skeleton how you see fit
 - [ ] Hook up to the back end
 	- [ ] implement API call utils
 - [ ] Implement search

@@ -6,7 +6,7 @@
   flex-direction: row;
 }
 
-#home-button {
+.menu-button {
   width: 69px;
   height: 100%;
   color: black;
@@ -15,19 +15,7 @@
   justify-content: center;
 }
 
-#home-button:hover {
+.menu-button:hover {
   background-color: lightgray;
-}
-
-#about-button {
-  width: 69px;
-  height: 100%;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#about-button:hover {
-  background-color: lightgray;
+  cursor: pointer;
 }
