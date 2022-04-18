@@ -39,17 +39,26 @@ class Resource {
   }
 }
 
+let genders = [];
+
 // returns a basic list of genders
 export function getGenders() {
-  let genders = [];
+  if (genders.length !== 0)
+    return genders;
+
   genders.push(new Gender("Male"));
   genders.push(new Gender("Female"));
   genders.push(new Gender("Other"));
   return genders;
 }
 
+let ageRanges = [];
+
 export function getAgeRanges() {
-  let ageRanges = [];
+  
+  if (ageRanges.length !== 0)
+    return ageRanges;
+
   ageRanges.push(new AgeRange(0, 9));
   ageRanges.push(new AgeRange(10, 19));
   ageRanges.push(new AgeRange(20, 29));
@@ -64,9 +73,12 @@ export function getAgeRanges() {
   return ageRanges;
 }
 
+let resources = [];
+
 export function getResources() {
 
-  let resources = [];
+  if (resources.length !== 0)
+    return resources;
   
   resources.push(new Resource(
     "Habitat for Humanity", 

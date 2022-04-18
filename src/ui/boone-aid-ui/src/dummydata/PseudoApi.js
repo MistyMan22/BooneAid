@@ -1,4 +1,4 @@
-import {getResources, getAgeRanges, getGenders} from "./Database";
+import {getResources, getAgeRanges, getGenders} from "./HardDatabase";
 
 // simulate getting the resources from the api
 export function getResourcesFromDatabase() {

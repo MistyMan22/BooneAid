@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AboutPage from './components/AboutPage/AboutPage';
 import SearchPage from './components/SearchPage/SearchPage';
 import MenuBar from './components/MenuBar/MenuBar';
+import ResourceView from './components/ResourceView/ResourceView';
 
 function App() {
   return (
@@ -13,9 +14,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='about' element={<AboutPage/>}/>
-          <Route path='resources' element={<SearchPage/>}>
-            <Route path=':resourceid' element={<AboutPage/>}/>
-          </Route>
+          <Route path='resources' element={<SearchPage/>}/>
+          <Route path='resources/:resourceid' element={<ResourceView/>}/>
         </Routes>
       </Router>
     </div>
