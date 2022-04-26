@@ -26,6 +26,7 @@ export default function ResourceView(props) {
 
   return (
     <div>
+      <img src={resource.picture} alt="Resource Image"/>
       <h1>{resource.name}</h1>
       <p>{resource.description}</p>
       <a href={resource.link}>Website</a>

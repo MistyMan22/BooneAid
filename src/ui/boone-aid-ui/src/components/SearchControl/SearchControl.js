@@ -20,25 +20,12 @@ export default function SearchControl() {
   }, []);
 
   return (
-    <div id="search-control">
-      <div id="search-box-container">
-        <span id="search-label">Search </span>
-        <input type="text" id="search" name="search" required/>
-      </div>
-      <div id="filter-container">
-        <div className="select-container">
-          <label className="select-label">Gender </label>
-          <select className="filter-select" id="gender-select" name="gender">
-            {genders.map((gender) => (<option key={gender.id}>{gender.name}</option>))}
-          </select>
-        </div>
-        <div className="select-container">
-          <label className="select-label">Age </label>
-          <select className="filter-select" id="age-select" name="age">
-            {ageRanges.map((age) => (<option key={age.id}>{age}</option>))}
-          </select>
-        </div>
-      </div>
+    <div id="search-container">
+      <span className="container-item">Search Resources</span>
+      <select className="container-item">
+        <option>Select Filter</option>
+      </select>
+      <input className="container-item" type="text" name="search" required/>
     </div>
   );
 }

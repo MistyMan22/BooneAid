@@ -5,6 +5,12 @@ import AboutPage from './components/AboutPage/AboutPage';
 import SearchPage from './components/SearchPage/SearchPage';
 import MenuBar from './components/MenuBar/MenuBar';
 import ResourceView from './components/ResourceView/ResourceView';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faMountain } from '@fortawesome/free-solid-svg-icons';
+
+// make font-awesome icons globally available
+library.add(fab, faMountain)
 
 function App() {
   return (
