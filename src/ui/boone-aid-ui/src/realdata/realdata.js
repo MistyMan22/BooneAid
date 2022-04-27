@@ -1,3 +1,4 @@
+
 // types of support
 const healthcare = "Healthcare"
 const pregnancySupport = "Pregnancy Support"
@@ -16,20 +17,50 @@ const pharmacy = "Pharmacy"
 const homeRepair = "Home Repair"
 const firewood = "Firewood"
 
+export function getSupportTypes() {
+  return [
+    healthcare,
+    pregnancySupport,
+    peripartumSupport,
+    supportGroups,
+    awareness,
+    crisis24hourLine,
+    crisisIntervention,
+    legalSupport,
+    housing,
+    caseManagement,
+    foodPantry,
+    mealDelivery,
+    financialSupport,
+    pharmacy,
+    homeRepair,
+    firewood
+  ]
+}
+
 
 // for
 const domesticViolenceVictims = "Domestic Violence Victims";
 const infants = "Infants";
 const wccStudents = "Wilkes Community College Students";
 const all = "Anyone in Need";
-const wataugaResident = "Watauga County Residents";
-const asheResident = "Ashe County Residents";
-const averyResident = "Avery County Residents";
 const impovershed = "Impovershed Families and Individuals";
 const women = "Women";
 const homeless = "Homeless Families and Individuals";
 
-export default [
+export function getServedTypes() {
+  return [
+    domesticViolenceVictims,
+    infants,
+    wccStudents,
+    all,
+    impovershed,
+    women,
+    homeless,
+  ]
+}
+
+let resources = [
   {
     name: "Children's Council of Watauga County",
     url: "thechildrenscouncil.org",
@@ -41,7 +72,7 @@ export default [
       peripartumSupport
     ],
     for: [
-      women
+      women, 
     ],
     additionalInfo: true
   },
@@ -145,6 +176,7 @@ export default [
       all
     ],
     additionalInfo: false,
+    id: "test"
   },
 
   {
@@ -174,9 +206,6 @@ export default [
       pharmacy
     ],
     for: [
-      wataugaResident,
-      asheResident,
-      averyResident,
       impovershed
     ],
     additionalInfo: true,
@@ -216,18 +245,25 @@ export default [
     additionalInfo: true,
   },
 
-  {
-    name: "",
-    url: "",
-    phone: "",
-    address: "",
-    email: "",
-    description: "",
-    services: [
-    ],
-    for: [
+  // {
+  //   name: "",
+  //   url: "",
+  //   phone: "",
+  //   address: "",
+  //   email: "",
+  //   description: "",
+  //   services: [
+  //   ],
+  //   for: [
 
-    ],
-    additionalInfo: true,
-  },
+  //   ],
+  //   additionalInfo: true,
+  // },
 ]
+
+export function getResources() {
+  for (let i = 0; i < resources.length; i++)
+    resources[i].id = i.toString();
+  
+  return resources;
+}

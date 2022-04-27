@@ -1,0 +1,15 @@
+.filter-tile {
+  padding: .2em .5em;
+  border: 1px solid #707070;
+  border-radius: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: .5em;
+}
+
+.filter-tile .close {
+  font-weight: bold;
+  margin-left: 1em;
+  cursor: pointer;
+}

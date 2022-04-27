@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './MenuBar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {ReactComponent as Logo} from '../../images/Logo.svg'
 
 export default function MenuBar() {

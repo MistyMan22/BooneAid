@@ -1,39 +1,31 @@
 .resource-list-item {
   height: 80px;
-  border: none;
   background-color: white;
   border-radius: 2em;
   margin: 1em;
   border: 1px solid #bbb;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .item-name {
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  margin: auto 0em auto 3em;
+}
+
+.item-description {
+  font-size: 1em;
+  text-align: left;
+  margin: auto 0em auto 3em;
 }
 
 .resource-list-item:hover {
-
   box-shadow: 3px 3px rgba(0, 0, 0, .06);
-  background-blend-mode: color-burn;
 }
 
-a:link { 
-  text-decoration: none; 
-}
-
-a:visited { 
-  text-decoration: none; 
-}
-
-a:hover { 
-  text-decoration: none; 
-}
-
-a:active { 
-  text-decoration: none; 
+a {
+  text-decoration: none;
+  color: black;
 }

@@ -1,0 +1,47 @@
+.filter-container-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #707070;
+  border-radius: .5em;
+  padding: .3em 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-name {
+  font-size: 1em !important;
+  font-weight: normal !important;
+}
+
+.caret-icon {
+  margin: auto .5em;
+  font-size: 1em !important;
+  font-weight: normal !important;
+}
+
+.filter-container-box:hover {
+  cursor: pointer;
+}
+
+.filter-items {
+  background-color: white;
+  border: 1px solid #707070;
+  position: absolute;
+  top: 0px;
+}
+
+.filter-items ul {
+  list-style-type: none;
+}
+
+.filter-items li:hover {
+  background-color: #707070;
+  cursor: pointer;
+}
