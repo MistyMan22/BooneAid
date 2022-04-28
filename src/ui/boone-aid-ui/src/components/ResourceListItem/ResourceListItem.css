@@ -1,11 +1,11 @@
 .resource-list-item {
-  height: 80px;
-  background-color: white;
-  border-radius: 2em;
-  margin: 1em;
-  border: 1px solid #bbb;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+	background-color: white;
+	border-radius: 2em;
+	margin: .2em;
+	border: 1px solid #bbb;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: .5em;
 }
 
 .item-name {

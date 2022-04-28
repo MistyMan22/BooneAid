@@ -15,7 +15,6 @@ export default function ResourceList(props) {
   }, []);
 
   function passesFilter(resource, filter) {
-    console.log("filtering")
     if (typeof(filter.for) === "undefined")
       return true;
 
@@ -39,8 +38,8 @@ export default function ResourceList(props) {
         return false;
     }
 
-    if (!filter.keyword === "") {
-      if (!resource.name.includes(filter.keyword))
+    if (filter.keywordFilter !== "") {
+      if (!resource.name.toLowerCase().includes(filter.keywordFilter.toLowerCase()))
         return false;
     }
 

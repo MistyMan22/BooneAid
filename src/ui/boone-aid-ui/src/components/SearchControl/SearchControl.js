@@ -16,6 +16,14 @@ export default function SearchControl(props) {
     signalFilterUpdate()
   }, [typeFilters, forFilters, keywordFilter]);
 
+  function hasKeywordFilter() {
+    return keywordFilter.length > 0;
+  }
+
+  function filterEmpty() {
+    return (typeFilters[0] === "Any Service" && forFilters[0] === "Anyone in Need" && keywordFilter === "");
+  }
+
   function filterObject() {
     let filterObj = {
       services: typeFilters,
@@ -96,6 +104,23 @@ export default function SearchControl(props) {
     setTypeFilters(newTypeFilters);
   }
 
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      setKeywordFilter(event.target.value);
+    }
+  }
+
+  function handleKeyDown(event) {
+    if (event.key === "Backspace")
+      setKeywordFilter("");
+  }
+
+  function handleClearButtonClicked() {
+    setKeywordFilter("");
+    setForFilters(["Anyone in Need"]);
+    setTypeFilters(["Any Service"]);
+  }
+
   useEffect(() => {
     populateSupportForTypes();
     populateSupportTypes();
@@ -110,13 +135,16 @@ export default function SearchControl(props) {
         <p>For:</p>
         <FilterSelect filterItems={supportForTypes} filterName={"Category"} handleItemClicked={handleForClicked}/>
         <p>With Keywords:</p>
-        <input className="container-item" type="text" name="search" required/>
+        <input className="container-item" type="text" name="search" placeholder="Enter Keyword" onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} required/>
+        {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
       </div>
       <div id="filter-list-container">
         <p>Showing resources that provide: </p>
         {typeFilters.map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTileClosed}/>)}
         <p>For:</p>
         {forFilters.map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTileClosed}/>)}
+        {(hasKeywordFilter()) &&
+        <p>Containing Keyword: <strong>{keywordFilter}</strong></p>}
       </div>
     </div>
   );
