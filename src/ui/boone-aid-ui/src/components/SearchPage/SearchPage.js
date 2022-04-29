@@ -10,7 +10,6 @@ export default function SearchPage() {
 
   function onFilterUpdated(newFilter) {
     setFilter(newFilter);
-    console.log("in page")
   }
 
   return (

@@ -33,18 +33,22 @@
 	- [x] [[ba33]] Implement Search Area Component
 		- [x] [[ba34]] Rough Wireframe
 		- [x] [[ba35]] Implement
-	- [ ] [[ba36]] finish site skeleton how you see fit
-- [ ] Hook up to the back end
-	- [ ] implement API call utils
-- [ ] Implement search
-	- [ ] ...
-	- [ ] ...
-- [ ] Assess MVP
+	- [x] [[ba36]] finish site skeleton how you see fit
+	- [ ] [[ba37]] make search params persist when going back to the search page
+	- [ ] update the full view to show the resource info in a sidebar
+	- [ ] add in the rest of the resources
+	- [ ] add images to all the resources
+	- [ ] make it work for different viewer widths (mobile, tablet, etc)
+	- [ ] add a contact page that can send emails to me
+	- [ ] optimize colors
+	- [ ] figure out how/where to host (consider scalability to ultimately use a database/containers)
+	- [ ] get it hosted, LAUNCH mvp!
 
 Unprioritized
-- hook up a linter
-	- make it do two space tabs
-	- change the VS code settings to do two page tabs
+- [ ] get rid of hard coded type strings
+- [ ] backspace gets rid of type filters too 
+- [ ] alphabetize resources and filter lists
+- [ ] give a key prop to every item in each filter list
 - test harness
 	- create a set of tests that test the API endpoints
 	- all subsequent tasks should require tests

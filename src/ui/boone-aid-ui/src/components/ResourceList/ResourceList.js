@@ -47,7 +47,6 @@ export default function ResourceList(props) {
   }
 
   function doit() {
-    console.log("in list");
     return resources.filter(r => passesFilter(r, props.filter));
   }
   const filteredResources = doit();

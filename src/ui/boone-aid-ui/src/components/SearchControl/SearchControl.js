@@ -1,34 +1,98 @@
 import React, {useEffect, useState} from 'react';
 import './SearchControl.css';
-import { getResources, getServedTypes, getSupportTypes } from '../../realdata/realdata';
+import { getServedTypes, getSupportTypes } from '../../realdata/realdata';
+import { useSearchParams } from 'react-router-dom';
 import { FilterSelect } from '../FilterSelect/FilterSelect';
 import FilterTile from '../FilterTile/FilterTile';
+import qs from 'query-string'
 
 export default function SearchControl(props) {
 
   const [supportTypes, setSupportTypes] = useState([]);
   const [supportForTypes, setSupportForTypes] = useState([]);
-  const [typeFilters, setTypeFilters] = useState(["Any Service"]);
-  const [forFilters, setForFilters] = useState(["Anyone in Need"]);
-  const [keywordFilter, setKeywordFilter] = useState("");
+  const [filters, setFilters] = useSearchParams();
+  const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
-    signalFilterUpdate()
-  }, [typeFilters, forFilters, keywordFilter]);
+    signalFilterUpdate();
+  }, [filters]);
 
   function hasKeywordFilter() {
-    return keywordFilter.length > 0;
+    return getKeywordFilter().length > 0;
+  }
+
+  function getKeywordFilter() {
+    let kwf = filters.get("keywordFilter");
+
+    if (kwf === null || typeof(kwf) === "undefined")
+      return "";
+
+    return kwf;
+  }
+
+  function getTypeFilters() {
+    let tf = filters.get("typeFilters");
+
+    if (tf === null || typeof(tf) === "undefined")
+      return ["Any Service"];
+
+    let parsed = tf.split(',');
+    return parsed;
+  }
+
+  function getForFilters() {
+    let ff = filters.get("forFilters");
+
+    if (ff === null || typeof(ff) === "undefined")
+      return ["Anyone in Need"];
+
+    let parsed = ff.split(',');
+    return parsed;
+  }
+
+  function setTypeFilters(f) {
+    let parsed = qs.parse(filters.toString())
+    setFilters({
+      ...parsed,
+      typeFilters: f
+    });
+  }
+
+  function setForFilters(f) {
+    let parsed = qs.parse(filters.toString())
+    setFilters({
+      ...parsed,
+      forFilters: f
+    });
+  }
+
+  function setKeywordFilter(f, updateInput) {
+    let parsed = qs.parse(filters.toString())
+    setFilters({
+      ...parsed,
+      keywordFilter: f
+    });
+    
+    if (updateInput)
+      setKeyword(f);
+  }
+
+  function arrayToParamString(arr) {
+    let str = "";
+    arr.map(item => str += (item.toString() + ','));
+    str = str.slice(0, -1);  // get rid of the extraneous comma
+    return str;
   }
 
   function filterEmpty() {
-    return (typeFilters[0] === "Any Service" && forFilters[0] === "Anyone in Need" && keywordFilter === "");
+    return (getTypeFilters()[0] === "Any Service" && getForFilters()[0] === "Anyone in Need" && getKeywordFilter() === "");
   }
 
   function filterObject() {
     let filterObj = {
-      services: typeFilters,
-      for: forFilters,
-      keywordFilter: keywordFilter
+      services: getTypeFilters(),
+      for: getForFilters(),
+      keywordFilter: getKeywordFilter()
     };
 
     return filterObj;
@@ -51,7 +115,7 @@ export default function SearchControl(props) {
   }
 
   function handleForClicked(item) {
-    let newForFilters = [...forFilters];
+    let newForFilters = [...getForFilters()];
 
     if (newForFilters.includes(item))
       return;
@@ -62,11 +126,11 @@ export default function SearchControl(props) {
       newForFilters = newForFilters.filter(item => item !== "Anyone in Need");
 
     newForFilters.push(item);
-    setForFilters(newForFilters);
+    setForFilters(arrayToParamString(newForFilters));
   }
 
   function handleTypeClicked(item) {
-    let newTypeFilters = [...typeFilters];
+    let newTypeFilters = [...getTypeFilters()];
 
     if (newTypeFilters.includes(item))
       return;
@@ -77,31 +141,35 @@ export default function SearchControl(props) {
       newTypeFilters = newTypeFilters.filter(item => item !== "Any Service");
 
     newTypeFilters.push(item);
-    setTypeFilters(newTypeFilters);
+    setTypeFilters(arrayToParamString(newTypeFilters));
   }
 
-  function onTileClosed(name) {
+  function onTypeTileClosed(name) {
     let newTypeFilters = [];
-    let newForFilters = [];
 
-    for (let item of typeFilters) {
+    for (let item of getTypeFilters()) {
       if (item !== name)
         newTypeFilters.push(item);
-    }
-
-    for (let item of forFilters) {
-      if (item !== name)
-        newForFilters.push(item);
     }
 
     if (newTypeFilters.length === 0)
       newTypeFilters.push("Any Service");
     
+    setTypeFilters(arrayToParamString(newTypeFilters));
+  }
+
+  function onForTileClosed(name) {
+    let newForFilters = [];
+
+    for (let item of getForFilters()) {
+      if (item !== name)
+        newForFilters.push(item);
+    }
+    
     if (newForFilters.length === 0)
       newForFilters.push("Anyone in Need");
 
-    setForFilters(newForFilters);
-    setTypeFilters(newTypeFilters);
+    setForFilters(arrayToParamString(newForFilters));
   }
 
   function handleKeyPress(event) {
@@ -112,39 +180,42 @@ export default function SearchControl(props) {
 
   function handleKeyDown(event) {
     if (event.key === "Backspace")
-      setKeywordFilter("");
+      setKeywordFilter("", false);
   }
 
   function handleClearButtonClicked() {
-    setKeywordFilter("");
-    setForFilters(["Anyone in Need"]);
-    setTypeFilters(["Any Service"]);
+    setFilters({keywordFilter: "", forFilters: "Anyone in Need", typeFilters: "Any Service"});
+    setKeyword("");
+  }
+
+  function updateKeyword(event) {
+    setKeyword(event.target.value);
   }
 
   useEffect(() => {
     populateSupportForTypes();
     populateSupportTypes();
+    setKeyword(getKeywordFilter());
   }, []);
 
   return (
     <div id="search-complex-container">
       <div id="search-container">
-        {/* <span className="container-item" id="search-container-title">Resource Search:</span> */}
         <p>I'm Looking For:</p>
         <FilterSelect filterItems={supportTypes} filterName={"Service"} handleItemClicked={handleTypeClicked}/>
         <p>For:</p>
         <FilterSelect filterItems={supportForTypes} filterName={"Category"} handleItemClicked={handleForClicked}/>
         <p>With Keywords:</p>
-        <input className="container-item" type="text" name="search" placeholder="Enter Keyword" onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} required/>
+        <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
         {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
       </div>
       <div id="filter-list-container">
         <p>Showing resources that provide: </p>
-        {typeFilters.map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTileClosed}/>)}
+        {getTypeFilters().map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTypeTileClosed}/>)}
         <p>For:</p>
-        {forFilters.map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTileClosed}/>)}
+        {getForFilters().map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onForTileClosed}/>)}
         {(hasKeywordFilter()) &&
-        <p>Containing Keyword: <strong>{keywordFilter}</strong></p>}
+        <p>Containing Keyword: <strong>{getKeywordFilter()}</strong></p>}
       </div>
     </div>
   );
