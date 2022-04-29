@@ -1,5 +1,5 @@
 import react, {useEffect, useState} from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getResources } from "../../realdata/realdata";
 import './ResourceView.css';
 
@@ -7,6 +7,7 @@ export default function ResourceView(props) {
   
   const [resource, setResource] = useState({});
   let params = useParams();
+  let navigate = useNavigate();
 
   function getResourceData() {
     let resources = getResources();
@@ -23,7 +24,7 @@ export default function ResourceView(props) {
 
   return (
     <div>
-      <Link className="back-button" to='../resources'><span>&lt;</span> Back to Search</Link>
+      <div className="back-button" onClick={() => navigate(-1)}><span>&lt;</span> Back to Search</div>
       <div className="resource-tile">
         <h1>{resource.name}</h1>
         <p>{resource.description}</p>
