@@ -1,25 +1,8 @@
 .resource-tile {
-  margin: 3em 4em;
-  border-radius: 3em;
-  border: 1px solid #707070;
+  margin: 1em 1em;
   padding: 1.5em;
-  background: white;
 }
 
 h1 {
   text-align: center;
-}
-
-.back-button {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin: 1em;
-}
-
-.back-button span {
-  font-size: 2em;
-}
-
-.back-button:hover {
-  cursor: pointer;
 }

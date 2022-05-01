@@ -18,19 +18,17 @@ export default function ResourceView(props) {
   }
 
   useEffect(() => {
+    console.log("mount me");
     getResourceData();
   }, []);
 
 
   return (
-    <div>
-      <div className="back-button" onClick={() => navigate(-1)}><span>&lt;</span> Back to Search</div>
-      <div className="resource-tile">
-        <h1>{resource.name}</h1>
-        <p>{resource.description}</p>
-        <a href={resource.link}>Website</a>
-        <p>{resource.phone}</p>
-      </div>
+    <div className="resource-tile">
+      <h1>{resource.name}</h1>
+      <p>{resource.description}</p>
+      <a href={resource.link}>Website</a>
+      <p>{resource.phone}</p>
     </div>
   );
 }

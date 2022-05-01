@@ -15,8 +15,10 @@ export default function SearchPage() {
   return (
     <div>
       <SearchControl onFilterChanged={onFilterUpdated}/>
-      <ResourceList filter={filter}/>
-      <Outlet/>
+      <div id="results-container">
+        <ResourceList filter={filter}/>
+        <Outlet/>
+      </div>
     </div>
   );
 }

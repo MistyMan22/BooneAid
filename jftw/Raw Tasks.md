@@ -34,8 +34,8 @@
 		- [x] [[ba34]] Rough Wireframe
 		- [x] [[ba35]] Implement
 	- [x] [[ba36]] finish site skeleton how you see fit
-	- [ ] [[ba37]] make search params persist when going back to the search page
-	- [ ] update the full view to show the resource info in a sidebar
+	- [x] [[ba37]] make search params persist when going back to the search page
+	- [ ] [[ba38]] update the full view to show the resource info in a sidebar
 	- [ ] add in the rest of the resources
 	- [ ] add images to all the resources
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
@@ -49,6 +49,8 @@ Unprioritized
 - [ ] backspace gets rid of type filters too 
 - [ ] alphabetize resources and filter lists
 - [ ] give a key prop to every item in each filter list
+- [ ] get a better font
+- [ ] robustify react routes (make sure routes that don't make sense are handled correctly)
 - test harness
 	- create a set of tests that test the API endpoints
 	- all subsequent tasks should require tests
