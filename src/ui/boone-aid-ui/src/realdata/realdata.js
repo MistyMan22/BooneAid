@@ -24,6 +24,14 @@ const soupKitchen = "Soup Kitchen"
 const affordableHousing = "Affordable Housing"
 const freeTransportation = "Free Transportation"
 const employmentAssistance = "Employment Assistance"
+const educationAssistance = "Education Assistance"
+const counseling = "Counseling"
+const mentorship = "Mentorship"
+const prenatalYoga = "Prenatal Yoga"
+const freeDiapers = "Free Diapers"
+const consulting = "Consulting"
+const parentEducation = "Parent Education"
+const foodDelivery = "Food Delivery"
 
 export function getSupportTypes() {
   return [
@@ -49,7 +57,14 @@ export function getSupportTypes() {
     soupKitchen,
     affordableHousing,
     freeTransportation,
-    employmentAssistance
+    employmentAssistance, 
+    educationAssistance,
+    counseling,
+    mentorship,
+    prenatalYoga,
+    freeDiapers,
+    consulting,
+    foodDelivery
   ]
 }
 
@@ -58,21 +73,42 @@ export function getSupportTypes() {
 const domesticViolenceVictims = "Domestic Violence Victims";
 const infants = "Infants";
 const wccStudents = "Wilkes Community College Students";
-const all = "Anyone in Need";
+const anyoneInNeed = "Anyone in Need";
 const impovershed = "Impovershed Families and Individuals";
 const women = "Women";
 const homeless = "Homeless Families and Individuals";
 const elderly = "Elderly"
+const mothers = "Mothers"
+const transBirthParents = "Trans Birth Parents"
+const genderNonConformingBirthParents = "Gender-Nonconforming Birth Parents"
+const expectantMothers = "Expectant Mothers";
+const expectantTransBirthParents = "Expectant Trans Birth Parents";
+const teenageMothers = "Teenage Mothers";
+const expectantTeenageMothers = "Expectant Teenage Mothers";
+const parents = "Parents"
+const interpersonalViolenceVictims = "Interpersonal Violence Victims"
+const sexualAssaultVictims = "Sexual Assault Victims"
+const children = "Children";
 
 export function getServedTypes() {
   return [
     domesticViolenceVictims,
     infants,
     wccStudents,
-    all,
+    anyoneInNeed,
     impovershed,
     women,
     homeless,
+    elderly,
+    mothers,
+    transBirthParents,
+    genderNonConformingBirthParents,
+    expectantMothers,
+    expectantTransBirthParents,
+    parents,
+    interpersonalViolenceVictims,
+    sexualAssaultVictims,
+    children
   ]
 }
 
@@ -84,13 +120,124 @@ let resources = [
     address: "225 Birch Street, Suite 3, Boone NC 28607",
     description: "Pregnency/Peripartum support",
     services: [
-      pregnancySupport,
-      peripartumSupport
+      {
+        name: "Circle of Parents Postpartum Distress Support",
+        description: [
+          "Support group for new mothers and birth parents experiencing any symptoms on the spectrum of postpartum distress",
+          "Nonjudgemental, supportive group sessions for sharing experiences",
+          "Wednesday from 11AM-12PM via zoom",
+          "Free, but registration is requested",
+          "Contact Sophie Rudisill at Sophierudisill@thechildrenscouncil.org or call (828) 262-5425"
+        ],
+        serviceTypes: [
+          supportGroups,
+        ],
+        for: [
+          mothers,
+          transBirthParents,
+          genderNonConformingBirthParents
+        ],
+      },
+      {
+        name: "Circle of Parents Pregnancy Support",
+        description: [
+          "Weekly pregnancy support circle for expectant mothers to share feelings, questions, concerns, thoughts",
+          "Prenatal yoga incorperated",
+          "Meets Thursday 12-1PM via Zoom",
+          "Contact Allison@thechildrenscouncil.org"
+        ],
+        serviceTypes: [
+          supportGroups,
+          prenatalYoga
+        ],
+        for: [
+          expectantMothers, 
+          expectantTransBirthParents,
+        ]
+      },
+      {
+        name: "Adolescent Parenting Program",
+        description: [
+          "Free program for pregnant and first-time parenting teens between the ages of 13 and 19",
+          "Emphasizes goals of staying in school while delivering and raising healthy children"
+        ],
+        serviceTypes: [
+          educationAssistance,
+          counseling,
+          supportGroups,
+          mentorship
+        ],
+        for: [
+          expectantTeenageMothers,
+          teenageMothers
+        ]
+      },
+      {
+        name: "Diaper Bank",
+        description: [
+          "Diaper supply and distribution to Watauga County parents in need",
+          "Partnership with the Hunger and Health Coalition for pickup",
+          "Watauga County Parents in need eligible to receive two free packs of diapers per child per month, one pack of wipes per family per month, and one can of infant formula per family per month for free",
+          "Occasional out of stock periods due to low donation volume",
+          "Tuesdays and Thursdays from 10AM to 3PM at the HHC",
+          "Contact Matt at Matt@thechildrenscouncil.org"
+        ],
+        serviceTypes: [
+          freeDiapers
+        ],
+        for: [
+          parents
+        ]
+      }, 
+      {
+        name: "Positive Parenting Program (Triple P)",
+        description: [
+          "Strategy session to develop techniques to support children’s needs",
+          "Offered to parents of children 0-12",
+          "Individual sessions with a practitioner regarding a behavioral concern",
+          "Topics include bedtime issues, temper tantrums, chores, sharing, etc",
+          "4 or 10-week sessions offered",
+          "Sliding scale payment system",
+          "Contact Jeannie at jeannie@thechildrenscouncil.org for signup",
+        ],
+        serviceTypes: [
+          mentorship,
+          consulting
+        ],
+        for: [
+          parents
+        ]
+      },
+      {
+        name: "Parents as Teachers",
+        description: [
+          "Parent education and family support program serving families from pregnancy through age three",
+          "PAT certified educators present scientific information regarding early brain development with advice to optimize language, intellectual development, social development, and motor skills",
+          "Contact Robin Triplett at robin@thechildrenscouncil.org",
+        ],
+        serviceTypes: [
+          parentEducation
+        ],
+        for: [
+          parents
+        ]
+      },
+      {
+        name: "Circle of Parents",
+        description: [
+          "Parenting support",
+          "Open to all parents and caregivers wanting to connect with other parents, learn about new resources, make crafts with your child, make toys, join a book club, discuss topics, etc",
+          "Wednesday mornings 10-11 AM via Zoom",
+          "Contact Renee Milligan @ Renee@thechildrenscouncil.org",
+        ],
+        serviceTypes: [
+          supportGroups
+        ],
+        for: [
+          parents
+        ]
+      }
     ],
-    for: [
-      women, 
-    ],
-    additionalInfo: true
   },
 
   {
@@ -100,10 +247,18 @@ let resources = [
     address: "",
     description: "Offers a free home visit by a registered nurse for families with newborn babies",
     services: [
-      healthcare,
-    ],
-    for: [
-      infants,
+      {
+        name: "Free nurse visit for newborn babies",
+        description: [
+          "A free home visit from a nurse for your newborn baby",
+        ],
+        serviceTypes: [
+          healthcare
+        ],
+        for: [
+          parents
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -115,12 +270,21 @@ let resources = [
     address: "2001 Main Service Center, Raleigh NC 27699",
     description: "Financial assistance to families who have suffered from domestic violence",
     services: [
-      housing,
-      financialSupport
+      {
+        name: "Financial Support for Domestic Violence Victims",
+        description:[
+          "Temporary Assistance for Needy Families (TANF)",
+          "Assistance for housing and utility deposits, education costs, transportation, shelter services, legal fees, clothing, medical needs, daycare",
+        ],
+        serviceTypes: [
+          financialSupport
+        ],
+        for: [
+          domesticViolenceVictims,
+          interpersonalViolenceVictims
+        ],
+      }
     ],
-    for: [
-      domesticViolenceVictims
-    ]
   },
 
   {
@@ -128,17 +292,66 @@ let resources = [
     url: "ashechildren.org/a-s-h-e",
     phone: "(336) 982-8851",
     address: "",
-    description: "",
+    description: "Domestic/Interpersonal Violence Support",
     services: [
-      housing,
-      supportGroups,
-      awareness,
-      legalSupport,
-      crisisIntervention,
-      crisis24hourLine,
-    ],
-    for: [
-      domesticViolenceVictims,
+      {
+        name: "Emergency Housing for Survivors",
+        description: [
+          "Confidential and Safe emergency/transitional housing for IPV/Domestic Violence survivors"
+        ],
+        serviceTypes: [
+          housing
+        ],
+        for: [
+          domesticViolenceVictims
+        ],
+      },
+
+      {
+        name: "Mentorship and Case Management",
+        description: [
+          "Case Management, information, referrals",
+          "Short-term crisis intervention and support",
+        ],
+        serviceTypes: [
+          mentorship,
+          caseManagement
+        ],
+        for: [
+          domesticViolenceVictims
+        ]
+      },
+
+      {
+        name: "Confidential IPV and Sexual Assault Support Groups",
+        description: [
+          "Support groups for victims of sexual assault, domestic violence and interpersonal violence",
+        ],
+        serviceTypes: [
+          supportGroups
+        ],
+        for: [
+          interpersonalViolenceVictims,
+          domesticViolenceVictims,
+          sexualAssaultVictims
+        ]
+      }, 
+
+      {
+        name: "24 Hour Crisis Line for Survivors",
+        description: [
+          "24 hour crisis line for survivors of domestic violence, sexual assault, and interpersonal violence",
+          "(336) 246-5430"
+        ],
+        serviceTypes: [
+          crisis24hourLine,
+        ],
+        for: [
+          domesticViolenceVictims,
+          sexualAssaultVictims,
+          interpersonalViolenceVictims
+        ]
+      }
     ],
     additionalInfo: true,
   },
@@ -151,16 +364,67 @@ let resources = [
     email: "outreach@oasisinc.org",
     description: "OASIS - Opposing Abuse with Service, Information, and Shelter",
     services: [
-      housing,
-      crisisIntervention,
-      supportGroups,
-      crisis24hourLine,
-      caseManagement,
+      {
+        name: "Emergency housing for Domestic Violence/IPV victims",
+        description: [
+          "Confidential emergency shelter for individuals and children fleeing DomesticViolence/IPV"
+        ],
+        serviceTypes: [
+          housing
+        ],
+        for: [
+          domesticViolenceVictims,
+          interpersonalViolenceVictims
+        ],
+      },
+      {
+        name: "Short term crisis intervention counseling",
+        description: [
+          "Short term crisis intervention counseling for victims of Domestic Violence/IPV"
+        ],
+        serviceTypes: [
+          counseling,
+        ],
+        for: [
+          domesticViolenceVictims,
+          interpersonalViolenceVictims,
+          sexualAssaultVictims
+        ]
+      },
+
+      {
+        name: "Confidential domestic violence and sexual assault support groups",
+        description: [
+          "Support groups for survivors of sexual assault and/or domestic violence"
+        ],
+        serviceTypes: [
+          supportGroups
+        ],
+        for: [
+          domesticViolenceVictims,
+          sexualAssaultVictims,
+          interpersonalViolenceVictims
+        ]
+      },
+
+      {
+        name: "24 hour domestic violence/sexual assault crisis line",
+        description: [
+          "24 hour crisis line for victims of domestic violence/sexual assault/interpersonal violence",
+          "Watauga: (828) 262-5035",
+          "Avery: (828) 504-0911",
+          "Spanish: (828) 504-0800"
+        ],
+        serviceTypes: [
+          crisis24hourLine,
+        ],
+        for: [
+          domesticViolenceVictims,
+          sexualAssaultVictims,
+          interpersonalViolenceVictims
+        ]
+      }
     ],
-    for: [
-      domesticViolenceVictims
-    ],
-    additionalInfo: true,
   },
 
   {
@@ -170,13 +434,82 @@ let resources = [
     address: "115 Colvard Street Jefferson NC 28640",
     description: "Food pantry in Ashe County",
     services: [
-      foodPantry
+      {
+        name: "Ashe Food Pantry",
+        description: [
+          "Healthy food distribution, including monthly boxes of nonperishables",
+          "Typical Hours: Monday, Tuesday, Thursday, Friday from 10AM - 2PM",
+          "MyPlate food proportions handout provided",
+          "Healthy recipes utilizing pantry items provided"
+        ],
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          anyoneInNeed
+        ],
+      },
+      {
+        name: "Operation Backpack",
+        description: [
+          "Food packs discreetly distributed on Fridays to children in food insecure homes",
+          "Contact child's teacher or guidance counseler for details",
+        ],
+        serviceTypes: [
+          foodDelivery
+        ],
+        for: [
+          children
+        ]
+      },
+
+      {
+        name: "WCC Prowler Pantry",
+        description: [
+          "Free, individually wrapped grab-and-go snacks and meal items",
+          "Open to all enrolled students of Wilkes Community College",
+          "Must present a current student ID"
+        ], 
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          wccStudents
+        ]
+      }, 
+
+      {
+        name: "Mountaineer Pantry",
+        description: [
+          "Monthly food Box distribution targeting those in outlying regions of Ashe County",
+          "Pickup locations include Creston VFD and Phoenix Baptist Church",
+          "Potential Client Contact: ashefoodpantry@skybest.com"
+        ],
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          anyoneInNeed,
+          // ashe county residents
+        ]
+      },
+
+      {
+        name: "Generations Ashe Pantry",
+        description: [
+          "Food access program for home-bound seniors",
+          "Weekly healthy, low prep meal delivery",
+          "Weekend 'Adult-Friendly Backpack'",
+          "Contact (336) 246-2461 and ask for Brenda or Glenda"
+        ],
+        serviceTypes: [
+          foodDelivery
+        ],
+        for: [
+          elderly
+        ]
+      }
     ],
-    for: [
-      wccStudents,
-      all
-    ],
-    additionalInfo: true,
   },
 
   {
@@ -186,13 +519,19 @@ let resources = [
     address: "204 Beaver Creek School Rd, West Jefferson NC 28694",
     description: "",
     services: [
-      foodPantry
+      {
+        name: "ARC food pantry",
+        description: [
+          "Food pantry with shelf-stable items, dairy, meats, fresh produce from local farmers"
+        ],
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          anyoneInNeed
+        ],
+      }
     ],
-    for: [
-      all
-    ],
-    additionalInfo: false,
-    id: "test"
   },
 
   {
@@ -202,11 +541,40 @@ let resources = [
     address: "11719 Hwy 88 W, Creston, NC 28615",
     description: "Food pantry and meal delivery",
     services: [
-      foodPantry,
-      mealDelivery
-    ],
-    for: [
-      all
+      {
+        name: "Food Pantry",
+        description: [
+          "Produce and nonperishables available",
+          "Open Tuesday, Wednesday, Thursday from 9AM-2PM"
+        ],
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          anyoneInNeed
+        ],
+      },
+
+      {
+        name: "Prepared Meal Delivery",
+        description: [
+          "Call (336) 385-1314 for details",
+        ],
+        serviceTypes: [
+          foodDelivery
+        ],
+        for: [
+          anyoneInNeed
+        ]
+      },
+
+      {
+        name: "Outgrow Hunger",
+        description: [
+          "Teaches community members how to cultivate produce gardens in their own backyards"
+        ],
+        s
+      }
     ],
     additionalInfo: true,
   },
@@ -219,10 +587,12 @@ let resources = [
     email: "",
     description: "Pharmacy for Watauga, Avery, and Ashe county residents at or below 200% of the federal poverty level",
     services: [
-      pharmacy
-    ],
-    for: [
-      impovershed
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -235,13 +605,12 @@ let resources = [
     email: "",
     description: "Short term and long term housing, food pantry",
     services: [
-      housing,
-      foodPantry,
-      financialSupport
-    ],
-    for: [
-      homeless,
-      domesticViolenceVictims,
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -254,11 +623,12 @@ let resources = [
     email: "",
     description: "Skilled home repair for those in need, by church members with with construction experience. Also provides free Firewood on volunteer work days",
     services: [
-      homeRepair,
-      firewood
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -271,11 +641,12 @@ let resources = [
     email: "",
     description: "Food Pantry, thrift store",
     services: [
-      foodPantry,
-      thriftItems
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -288,10 +659,12 @@ let resources = [
     email: "",
     description: "Pay what you can cafe, operating primarily with volunteers",
     services: [
-      affordableFood
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -304,11 +677,12 @@ let resources = [
     email: "",
     description: "Food pantry, $5 meals for anyone",
     services: [
-      foodPantry,
-      affordableFood
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -321,10 +695,12 @@ let resources = [
     email: "",
     description: "Food Pantry at Rumple Memorial Presbyterian Church",
     services: [
-      foodPantry
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -337,12 +713,12 @@ let resources = [
     email: "",
     description: "Community Garden and Food Pantry, Employment Assistance",
     services: [
-      foodPantry,
-      communityGarden, 
-      employmentAssistance
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -355,11 +731,12 @@ let resources = [
     email: "",
     description: "Bread of Life Community Kitchen, and Food Pantry",
     services: [
-      soupKitchen,
-      foodPantry
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -372,10 +749,12 @@ let resources = [
     email: "info@nwrha.com",
     description: "Affordable housing, Public Housing, Counciling",
     services: [
-      affordableHousing
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -388,10 +767,12 @@ let resources = [
     email: "",
     description: "Public bus and van transportation provided year-round",
     services: [
-      freeTransportation
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -404,9 +785,12 @@ let resources = [
     email: "",
     description: "Organization facilitating crowdfunding for dontation needs in the High Country",
     services: [
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -419,10 +803,12 @@ let resources = [
     email: "holy_cross@skybest.com",
     description: "",
     services: [
-      financialSupport,
-    ],
-    for: [
-      all
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
@@ -435,28 +821,33 @@ let resources = [
     email: "",
     description: "Food assistance for the elderly",
     services: [
-      foodPantry
-    ],
-    for: [
-      elderly
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
     ],
     additionalInfo: true,
   },
 
-  // {
-  //   name: "",
-  //   url: "",
-  //   phone: "",
-  //   address: "",
-  //   email: "",
-  //   description: "",
-  //   services: [
-  //   ],
-  //   for: [
-
-  //   ],
-  //   additionalInfo: true,
-  // },
+  {
+    name: "",
+    url: "",
+    phone: "",
+    address: "",
+    email: "",
+    description: "",
+    services: [
+      {
+        name: "",
+        for: [
+    
+        ],
+      }
+    ],
+    additionalInfo: true,
+  },
 ]
 
 export function getResources() {

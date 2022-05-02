@@ -34,9 +34,10 @@
 		- [x] [[ba34]] Rough Wireframe
 		- [x] [[ba35]] Implement
 	- [x] [[ba36]] finish site skeleton how you see fit
-	- [ ] [[ba37]] make search params persist when going back to the search page
+	- [x] [[ba37]] make search params persist when going back to the search page
+	- [ ] [[ba38]] add in the rest of the resources
+	- [ ] [[ba39]] refactor search to only allow one filter at a time
 	- [ ] update the full view to show the resource info in a sidebar
-	- [ ] add in the rest of the resources
 	- [ ] add images to all the resources
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
 	- [ ] add a contact page that can send emails to me
