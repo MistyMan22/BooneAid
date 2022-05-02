@@ -15,25 +15,11 @@
         }
       },
       {
-        "id": "c494d4dd5790b05f",
+        "id": "6bf40990ca127521",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ba37.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "da7a12371cd5307e",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ex8.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -111,14 +97,14 @@
   "active": "4a42f9a4d5a1b2d5",
   "lastOpenFiles": [
     "Raw Tasks.md",
-    "ex8.md",
+    "ba38.md",
     "ba37.md",
+    "ex8.md",
     "ex7.md",
     "ba36.md",
     "ba22.md",
     "ba35.md",
     "ba34.md",
-    "ba33.md",
-    "ba32.md"
+    "ba33.md"
   ]
 }

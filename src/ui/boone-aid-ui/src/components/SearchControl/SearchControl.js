@@ -115,7 +115,8 @@ export default function SearchControl(props) {
   }
 
   function handleForClicked(item) {
-    let newForFilters = [...getForFilters()];
+    //let newForFilters = [...getForFilters()];
+    let newForFilters = [];
 
     if (newForFilters.includes(item))
       return;
@@ -130,7 +131,8 @@ export default function SearchControl(props) {
   }
 
   function handleTypeClicked(item) {
-    let newTypeFilters = [...getTypeFilters()];
+    //let newTypeFilters = [...getTypeFilters()];
+    let newTypeFilters = []
 
     if (newTypeFilters.includes(item))
       return;
@@ -202,9 +204,9 @@ export default function SearchControl(props) {
     <div id="search-complex-container">
       <div id="search-container">
         <p>I'm Looking For:</p>
-        <FilterSelect filterItems={supportTypes} filterName={"Service"} handleItemClicked={handleTypeClicked}/>
+        <FilterSelect filterItems={supportTypes} filterName={getTypeFilters()[0]} handleItemClicked={handleTypeClicked}/>
         <p>For:</p>
-        <FilterSelect filterItems={supportForTypes} filterName={"Category"} handleItemClicked={handleForClicked}/>
+        <FilterSelect filterItems={supportForTypes} filterName={getForFilters()[0]} handleItemClicked={handleForClicked}/>
         <p>With Keywords:</p>
         <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
         {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
