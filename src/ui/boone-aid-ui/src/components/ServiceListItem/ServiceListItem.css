@@ -1,0 +1,10 @@
+#service-item-container {
+  padding: .5em;
+  border: 1px solid black;
+  margin: .5em;
+  border-radius: .5em;
+}
+
+#service-item-container:hover {
+  box-shadow: 0 0 .2em #ccc;
+}

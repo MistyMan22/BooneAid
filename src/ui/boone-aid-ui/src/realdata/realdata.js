@@ -8,7 +8,7 @@ const supportGroups = "Support Groups"
 const awareness = "Awareness"
 const crisisIntervention = "Crisis Intervention"
 const legalSupport = "Legal Support"
-const housing = "housing"
+const housing = "Housing"
 const crisis24hourLine = "24 Hour Crisis Line"
 const caseManagement = "Case Management"
 const foodPantry = "Food Pantry"
@@ -32,42 +32,7 @@ const freeDiapers = "Free Diapers"
 const consulting = "Consulting"
 const parentEducation = "Parent Education"
 const foodDelivery = "Food Delivery"
-
-export function getSupportTypes() {
-  return [
-    healthcare,
-    pregnancySupport,
-    peripartumSupport,
-    supportGroups,
-    awareness,
-    crisis24hourLine,
-    crisisIntervention,
-    legalSupport,
-    housing,
-    caseManagement,
-    foodPantry,
-    mealDelivery,
-    financialSupport,
-    pharmacy,
-    homeRepair,
-    firewood,
-    thriftItems,
-    affordableFood,
-    communityGarden,
-    soupKitchen,
-    affordableHousing,
-    freeTransportation,
-    employmentAssistance, 
-    educationAssistance,
-    counseling,
-    mentorship,
-    prenatalYoga,
-    freeDiapers,
-    consulting,
-    foodDelivery
-  ]
-}
-
+const gardeningEducation = "Gardening Education"
 
 // for
 const domesticViolenceVictims = "Domestic Violence Victims";
@@ -89,28 +54,6 @@ const parents = "Parents"
 const interpersonalViolenceVictims = "Interpersonal Violence Victims"
 const sexualAssaultVictims = "Sexual Assault Victims"
 const children = "Children";
-
-export function getServedTypes() {
-  return [
-    domesticViolenceVictims,
-    infants,
-    wccStudents,
-    anyoneInNeed,
-    impovershed,
-    women,
-    homeless,
-    elderly,
-    mothers,
-    transBirthParents,
-    genderNonConformingBirthParents,
-    expectantMothers,
-    expectantTransBirthParents,
-    parents,
-    interpersonalViolenceVictims,
-    sexualAssaultVictims,
-    children
-  ]
-}
 
 let resources = [
   {
@@ -573,7 +516,12 @@ let resources = [
         description: [
           "Teaches community members how to cultivate produce gardens in their own backyards"
         ],
-        s
+        serviceTypes: [
+          gardeningEducation
+        ],
+        for: [
+          anyoneInNeed
+        ]
       }
     ],
     additionalInfo: true,
@@ -588,10 +536,31 @@ let resources = [
     description: "Pharmacy for Watauga, Avery, and Ashe county residents at or below 200% of the federal poverty level",
     services: [
       {
-        name: "",
-        for: [
-    
+        name: "Fresh Food Pantry Market",
+        description: [
+          "Eligable families can recieve a food box every 14 days",
+          "Each box may contain canned fruits/veggies, tomato products, soups, canned proteins, frozen meats, dairy, pasta or rice, and breakfast items",
         ],
+        serviceTypes: [
+          foodPantry
+        ], 
+        for: [
+          anyoneInNeed
+        ]
+      }, 
+
+      {
+        name: "Food Recovery Kitchen",
+        description: [
+          "Donation based kitchen",
+          "With scheduled visits, a soup/sandwich to-go meal can be aquired for each member of the family",
+        ],
+        serviceTypes: [
+          soupKitchen
+        ],
+        for: [
+          anyoneInNeed
+        ]
       }
     ],
     additionalInfo: true,
@@ -606,248 +575,269 @@ let resources = [
     description: "Short term and long term housing, food pantry",
     services: [
       {
-        name: "",
-        for: [
-    
+        name: "Bread of Life Community Kitchen",
+        description: [
+          "Provides 3 meals a day, 365 days per year at Hospitality House location",
+          "Provided to all residents and community members at no charge"
+        ], 
+        serviceTypes: [
+          soupKitchen
         ],
+        for: [
+          anyoneInNeed
+        ],
+      },
+
+      {
+        name: "Hospitality House Food Pantry",
+        description: [
+          "Provides bags and boxes of food items donated from various grocers and food bank organizations",
+        ],
+        serviceTypes: [
+          foodPantry
+        ],
+        for: [
+          anyoneInNeed
+        ]
       }
+
     ],
     additionalInfo: true,
   },
 
-  {
-    name: "Boone United Methodist Church",
-    url: "booneumc.org",
-    phone: "(828) 264-6090",
-    address: "471 New Market Blvd, Boone NC, 28607",
-    email: "",
-    description: "Skilled home repair for those in need, by church members with with construction experience. Also provides free Firewood on volunteer work days",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Boone United Methodist Church",
+  //   url: "booneumc.org",
+  //   phone: "(828) 264-6090",
+  //   address: "471 New Market Blvd, Boone NC, 28607",
+  //   email: "",
+  //   description: "Skilled home repair for those in need, by church members with with construction experience. Also provides free Firewood on volunteer work days",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Reaching Avery Ministry",
-    url: "ramsrack.com",
-    phone: "(828)-733-5127",
-    address: "147 New Vale Rd, Po Box 234, Newland NC 28657",
-    email: "",
-    description: "Food Pantry, thrift store",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Reaching Avery Ministry",
+  //   url: "ramsrack.com",
+  //   phone: "(828)-733-5127",
+  //   address: "147 New Vale Rd, Po Box 234, Newland NC 28657",
+  //   email: "",
+  //   description: "Food Pantry, thrift store",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "FARM Cafe",
-    url: "farmcafe.org",
-    phone: "(828) 386-1000",
-    address: "617 W King St, Boone, NC 28607",
-    email: "",
-    description: "Pay what you can cafe, operating primarily with volunteers",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "FARM Cafe",
+  //   url: "farmcafe.org",
+  //   phone: "(828) 386-1000",
+  //   address: "617 W King St, Boone, NC 28607",
+  //   email: "",
+  //   description: "Pay what you can cafe, operating primarily with volunteers",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Jefferson United Methodist Church",
-    url: "jumc.church",
-    phone: "(336) 846-9512",
-    address: "115 E Main St, PO Box 236, Jefferson NC 28640",
-    email: "",
-    description: "Food pantry, $5 meals for anyone",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Jefferson United Methodist Church",
+  //   url: "jumc.church",
+  //   phone: "(336) 846-9512",
+  //   address: "115 E Main St, PO Box 236, Jefferson NC 28640",
+  //   email: "",
+  //   description: "Food pantry, $5 meals for anyone",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Blowing Rock Cares Food Pantry",
-    url: "blowingrockcares.com",
-    phone: "(828) 295-7675 ext 19",
-    address: "1218 Main Street, Blowing Rock NC 28605",
-    email: "",
-    description: "Food Pantry at Rumple Memorial Presbyterian Church",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Blowing Rock Cares Food Pantry",
+  //   url: "blowingrockcares.com",
+  //   phone: "(828) 295-7675 ext 19",
+  //   address: "1218 Main Street, Blowing Rock NC 28605",
+  //   email: "",
+  //   description: "Food Pantry at Rumple Memorial Presbyterian Church",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "W.A.M.Y. Community Action",
-    url: "wamycommunityaction.org",
-    phone: "(828) 264-2421",
-    address: "225 Birch Street, Suite 2, Boone NC 28607",
-    email: "",
-    description: "Community Garden and Food Pantry, Employment Assistance",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "W.A.M.Y. Community Action",
+  //   url: "wamycommunityaction.org",
+  //   phone: "(828) 264-2421",
+  //   address: "225 Birch Street, Suite 2, Boone NC 28607",
+  //   email: "",
+  //   description: "Community Garden and Food Pantry, Employment Assistance",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Hospitality House NW North Carolina",
-    url: "hosphouse.org",
-    phone: "(828) 264-1237",
-    address: "338 Brook Hollow Road, Boone NC 28607",
-    email: "",
-    description: "Bread of Life Community Kitchen, and Food Pantry",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Hospitality House NW North Carolina",
+  //   url: "hosphouse.org",
+  //   phone: "(828) 264-1237",
+  //   address: "338 Brook Hollow Road, Boone NC 28607",
+  //   email: "",
+  //   description: "Bread of Life Community Kitchen, and Food Pantry",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Northwest Regional Housing Authority",
-    url: "nwrha.com",
-    phone: "(828) 264-6683",
-    address: "869 Hwy 105 Ext, suites 11 and 12, Boone NC 28607",
-    email: "info@nwrha.com",
-    description: "Affordable housing, Public Housing, Counciling",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Northwest Regional Housing Authority",
+  //   url: "nwrha.com",
+  //   phone: "(828) 264-6683",
+  //   address: "869 Hwy 105 Ext, suites 11 and 12, Boone NC 28607",
+  //   email: "info@nwrha.com",
+  //   description: "Affordable housing, Public Housing, Counciling",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "AppalCART",
-    url: "appalcart.com",
-    phone: "(828) 297-1300",
-    address: "305 NC Hwy 105 Bypass, Boone NC 28607",
-    email: "",
-    description: "Public bus and van transportation provided year-round",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "AppalCART",
+  //   url: "appalcart.com",
+  //   phone: "(828) 297-1300",
+  //   address: "305 NC Hwy 105 Bypass, Boone NC 28607",
+  //   email: "",
+  //   description: "Public bus and van transportation provided year-round",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Quiet Givers",
-    url: "quietgivers.org",
-    phone: "",
-    address: "",
-    email: "",
-    description: "Organization facilitating crowdfunding for dontation needs in the High Country",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Quiet Givers",
+  //   url: "quietgivers.org",
+  //   phone: "",
+  //   address: "",
+  //   email: "",
+  //   description: "Organization facilitating crowdfunding for dontation needs in the High Country",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "The Church of the Holy Cross, Valley Crucis",
-    url: "holycrossvallecrucis.net",
-    phone: "(828) 963-4609",
-    address: "122 Skiles Way, Banner Elk, NC 28604",
-    email: "holy_cross@skybest.com",
-    description: "",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "The Church of the Holy Cross, Valley Crucis",
+  //   url: "holycrossvallecrucis.net",
+  //   phone: "(828) 963-4609",
+  //   address: "122 Skiles Way, Banner Elk, NC 28604",
+  //   email: "holy_cross@skybest.com",
+  //   description: "",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "Generations Ashe Pantry",
-    url: "ashefoodpantry.org/programs/generation-ashe-pantry",
-    phone: "(336) 246-2461",
-    address: "",
-    email: "",
-    description: "Food assistance for the elderly",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "Generations Ashe Pantry",
+  //   url: "ashefoodpantry.org/programs/generation-ashe-pantry",
+  //   phone: "(336) 246-2461",
+  //   address: "",
+  //   email: "",
+  //   description: "Food assistance for the elderly",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 
-  {
-    name: "",
-    url: "",
-    phone: "",
-    address: "",
-    email: "",
-    description: "",
-    services: [
-      {
-        name: "",
-        for: [
+  // {
+  //   name: "",
+  //   url: "",
+  //   phone: "",
+  //   address: "",
+  //   email: "",
+  //   description: "",
+  //   services: [
+  //     {
+  //       name: "",
+  //       for: [
     
-        ],
-      }
-    ],
-    additionalInfo: true,
-  },
+  //       ],
+  //     }
+  //   ],
+  //   additionalInfo: true,
+  // },
 ]
 
 export function getResources() {
@@ -855,4 +845,51 @@ export function getResources() {
     resources[i].id = i.toString();
   
   return resources;
+}
+
+export function getServices() {
+  let services = [];
+  let resources = getResources();
+  let id = 0;
+
+  for (let resource of resources) {
+    for (let service of resource.services) {
+      service.id = id;
+      services.push(service);
+    }
+  }
+
+  return services;
+}
+
+export function getServedTypes() {
+  let resources = getResources();
+  let types = [];
+
+  for (let resource of resources) {
+    for (let service of resource.services) {
+      for (let f of service.for) {
+        if (!types.includes(f))
+          types.push(f);
+      }
+    }
+  }
+
+  return types;
+}
+
+export function getSupportTypes() {
+  let resources = getResources();
+  let types = [];
+
+  for (let resource of resources) {
+    for (let service of resource.services) {
+      for (let t of service.serviceTypes) {
+        if (!types.includes(t))
+          types.push(t);
+      }
+    }
+  }
+
+  return types;
 }

@@ -5,6 +5,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import SearchPage from './components/SearchPage/SearchPage';
 import MenuBar from './components/MenuBar/MenuBar';
 import ResourceView from './components/ResourceView/ResourceView';
+import ServiceSearchPage from './components/ServiceSearchPage/ServiceSearchPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='about' element={<AboutPage/>}/>
           <Route path='resources' element={<SearchPage/>}/>
+          <Route path='services' element={<ServiceSearchPage/>}/>
           <Route path='resources/:resourceid' element={<ResourceView/>}/>
         </Routes>
       </Router>
