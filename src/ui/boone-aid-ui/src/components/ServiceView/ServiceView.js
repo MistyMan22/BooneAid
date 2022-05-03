@@ -33,30 +33,28 @@ export default function ServiceView(props) {
     if (service.serviceTypes === null || typeof(service.serviceTypes) === "undefined")
       return "No Types";
 
-    return service.serviceTypes.map(t => <li>{t}</li>);
+    return service.serviceTypes.map(t => <em>{t + ", "}</em>);
   }
 
   function serviceFors() {
     if (service.for === null || typeof(service.for) === "undefined")
       return "No Types";
     
-    return service.for.map(t => <li>{t}</li>);
+    return service.for.map(t => <em>{t + ", "}</em>);
   }
 
   return (
     <div>
       <div className="back-button" onClick={() => navigate(-1)}>Back to Search</div>
       <div className="service-tile">
-        <h1>{service.name}</h1>
+        <h1 class="align-left">{service.name}</h1>
+        <h3 class="align-left">Details</h3>
          {description()}
-        <p>Provides:</p>
-        <ul>
+        <h3 class="align-left">Service Description</h3>
+        <span>This service provides </span>
           {serviceTypes()}
-        </ul>
-        <p>For:</p>
-        <ul>
+        <span>For </span>
           {serviceFors()}
-        </ul> 
       </div>
     </div>
   );

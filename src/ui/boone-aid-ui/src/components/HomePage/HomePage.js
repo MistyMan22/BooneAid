@@ -10,7 +10,7 @@ export default function HomePage() {
         <div id="hero">
           <p id='display-text'>Welcome to BooneAid</p>
           <p id='secondary-text'>A free tool for connecting those in need in the Boone area with resources that can help</p>
-          <Link to='../resources' id='resource-button'>
+          <Link to='../services' id='resource-button'>
             Search Resources
           </Link>
         </div>

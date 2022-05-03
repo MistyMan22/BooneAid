@@ -20,7 +20,7 @@ export default function MenuBar() {
             Home
           </div>
         </Link>
-        <Link to='resources'>
+        <Link to='services'>
           <div className='menu-button'>
             Resources
           </div>

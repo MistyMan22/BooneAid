@@ -6,8 +6,8 @@
   background: white;
 }
 
-h1 {
-  text-align: center;
+.align-left {
+  text-align: left;
 }
 
 .back-button {
