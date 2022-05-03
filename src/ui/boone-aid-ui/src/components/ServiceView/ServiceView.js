@@ -1,11 +1,14 @@
 import {useEffect, useState} from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { getServices } from "../../realdata/realdata";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { getServices, getResourceByName } from "../../realdata/realdata";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import './ServiceView.css';
 
 export default function ServiceView(props) {
   
   const [service, setService] = useState({});
+  const [resource, setResource] = useState({});
   let params = useParams();
   let navigate = useNavigate();
 
@@ -17,6 +20,10 @@ export default function ServiceView(props) {
       setService(s);
     }
   }
+  
+  useEffect(() => {
+    setResource(getResourceByName(service.parent));
+  }, [service])
 
   useEffect(() => {
     getServiceData();
@@ -43,14 +50,23 @@ export default function ServiceView(props) {
     return service.for.map(t => <em>{t + ", "}</em>);
   }
 
+  function getResource() {
+    if (resource === null || typeof(resource) === "undefined")
+      return {name: "", url: "", phone: ""};
+
+    return resource;
+  }
+
   return (
     <div>
-      <div className="back-button" onClick={() => navigate(-1)}>Back to Search</div>
       <div className="service-tile">
-        <h1 class="align-left">{service.name}</h1>
-        <h3 class="align-left">Details</h3>
+        <div className="back-button" onClick={() => navigate(-1)}><span><FontAwesomeIcon id="back-caret" icon={faCaretLeft}/></span> Back</div>
+        <h1 className="align-left">{service.name}</h1>
+        <h3 className="align-left">Organization</h3>
+          <a href={"http://" + getResource().url}>{getResource().name}</a>
+        <h3 className="align-left">Details</h3>
          {description()}
-        <h3 class="align-left">Service Description</h3>
+        <h3 className="align-left">Service Description</h3>
         <span>This service provides </span>
           {serviceTypes()}
         <span>For </span>

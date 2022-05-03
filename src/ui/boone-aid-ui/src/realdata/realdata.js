@@ -900,3 +900,8 @@ export function getSupportTypes() {
 
   return types;
 }
+
+export function getResourceByName(name) {
+  const resources = getResources();
+  return resources.find(r => r.name == name)
+}

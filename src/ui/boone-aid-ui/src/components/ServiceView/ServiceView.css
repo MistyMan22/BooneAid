@@ -1,9 +1,8 @@
 .service-tile {
-  margin: 2em 1em;
-  border-radius: 1em;
-  border: 1px solid #707070;
+  margin: 2em auto;
   padding: 1.5em;
   background: white;
+  width: 60%;
 }
 
 .align-left {
@@ -13,7 +12,6 @@
 .back-button {
   font-weight: bold;
   font-size: 1.5em;
-  margin: 1em;
 }
 
 .back-button span {
@@ -22,4 +20,8 @@
 
 .back-button:hover {
   cursor: pointer;
+}
+
+#back-caret {
+  font-size: .5em;
 }

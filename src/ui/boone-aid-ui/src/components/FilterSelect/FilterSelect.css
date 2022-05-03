@@ -35,6 +35,7 @@
   border: 1px solid #707070;
   position: absolute;
   top: 0px;
+  padding: .5em;
 }
 
 .filter-items ul {
