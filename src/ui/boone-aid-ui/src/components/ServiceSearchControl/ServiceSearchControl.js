@@ -207,17 +207,9 @@ export default function ServiceSearchControl(props) {
         <FilterSelect filterItems={supportTypes} filterName={getTypeFilters()[0]} handleItemClicked={handleTypeClicked}/>
         <p>For:</p>
         <FilterSelect filterItems={supportForTypes} filterName={getForFilters()[0]} handleItemClicked={handleForClicked}/>
-        <p>With Keywords:</p>
+        <p>With Keyword:</p>
         <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
         {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
-      </div>
-      <div id="filter-list-container">
-        <p>Showing resources that provide: </p>
-        {getTypeFilters().map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onTypeTileClosed}/>)}
-        <p>For:</p>
-        {getForFilters().map(item => <FilterTile className="filter-list-container-item" name={item} onClose={onForTileClosed}/>)}
-        {(hasKeywordFilter()) &&
-        <p>Containing Keyword: <strong>{getKeywordFilter()}</strong></p>}
       </div>
     </div>
   );

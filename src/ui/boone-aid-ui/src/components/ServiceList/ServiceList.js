@@ -8,7 +8,6 @@ export default function ServiceList(props) {
 
   function populateServices() {
     setServices(getServices());
-    console.log(services);
   }
 
   useEffect(() => {
@@ -57,9 +56,28 @@ export default function ServiceList(props) {
 
   const filteredServices = getFilteredServices();
 
+  function getFoldedList() {
+    let result = [];
+
+    for (let i = 0; i < filteredServices.length; i+=2) {
+      let leftService = filteredServices[i];
+      let rightService = i + 1 < filteredServices.length ? filteredServices[i+1] : null;
+      result.push({left: leftService, right: rightService});
+    }
+
+    return result;
+  }
+
+  const foldedList = getFoldedList();
+
   return (
     <div id="resource-list">
-      {filteredServices.map(s => <ServiceListItem service={s}/>)}
+      {foldedList.map((item) => (
+        <div id="resource-list-row">
+          <ServiceListItem key={item.left.id} service={item.left}/>
+          {(item.right !== null) && <ServiceListItem key={item.right.id} service={item.right}/>}
+        </div>
+      ))}
     </div>
   )
 }

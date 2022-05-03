@@ -2,9 +2,19 @@
   padding: .5em;
   border: 1px solid black;
   margin: .5em;
-  border-radius: .5em;
+  border-radius: .3em;
+  height: 4em;
 }
 
 #service-item-container:hover {
-  box-shadow: 0 0 .2em #ccc;
+  box-shadow: 0 0 .5em #ccc;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.zero-tb-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

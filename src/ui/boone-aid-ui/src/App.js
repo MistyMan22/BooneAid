@@ -6,6 +6,7 @@ import SearchPage from './components/SearchPage/SearchPage';
 import MenuBar from './components/MenuBar/MenuBar';
 import ResourceView from './components/ResourceView/ResourceView';
 import ServiceSearchPage from './components/ServiceSearchPage/ServiceSearchPage';
+import ServiceView from './components/ServiceView/ServiceView'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='resources' element={<SearchPage/>}/>
           <Route path='services' element={<ServiceSearchPage/>}/>
           <Route path='resources/:resourceid' element={<ResourceView/>}/>
+          <Route path='services/:serviceid' element={<ServiceView/>}/>
         </Routes>
       </Router>
     </div>

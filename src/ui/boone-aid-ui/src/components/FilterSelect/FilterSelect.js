@@ -25,10 +25,10 @@ export function FilterSelect(props) {
         (itemsVisible) && 
         <div className="filter-items">
           <ul>
-            {props.filterItems.map(item => <li onClick={() => {
-              props.handleItemClicked(item);
+            {props.filterItems.map(item => <li key={item.id} onClick={() => {
+              props.handleItemClicked(item.data);
               setItemsVisible(false);
-            }}>{item}</li>)}
+            }}>{item.data}</li>)}
           </ul>
         </div>
       }

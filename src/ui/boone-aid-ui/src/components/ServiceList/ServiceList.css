@@ -1,0 +1,6 @@
+#resource-list-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}

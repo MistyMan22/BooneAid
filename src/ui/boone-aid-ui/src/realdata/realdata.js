@@ -854,8 +854,11 @@ export function getServices() {
 
   for (let resource of resources) {
     for (let service of resource.services) {
-      service.id = id;
+      service.parent = resource.name;
+      service.parentId = resource.id;
+      service.id = id.toString();
       services.push(service);
+      id++;
     }
   }
 
@@ -865,12 +868,14 @@ export function getServices() {
 export function getServedTypes() {
   let resources = getResources();
   let types = [];
+  let i = 0;
 
   for (let resource of resources) {
     for (let service of resource.services) {
       for (let f of service.for) {
-        if (!types.includes(f))
-          types.push(f);
+        let obj = {data: f, id: i++};
+        if (types.filter(o => o.data === f).length === 0)
+          types.push(obj);
       }
     }
   }
@@ -881,12 +886,14 @@ export function getServedTypes() {
 export function getSupportTypes() {
   let resources = getResources();
   let types = [];
+  let i = 0;
 
   for (let resource of resources) {
     for (let service of resource.services) {
       for (let t of service.serviceTypes) {
-        if (!types.includes(t))
-          types.push(t);
+        let obj = {data: t, id: i++};
+        if (types.filter(o => o.data === t).length === 0)
+          types.push(obj);
       }
     }
   }
