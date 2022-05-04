@@ -40,14 +40,40 @@ export default function ServiceView(props) {
     if (service.serviceTypes === null || typeof(service.serviceTypes) === "undefined")
       return "No Types";
 
-    return service.serviceTypes.map(t => <em>{t + ", "}</em>);
+    let str = "";
+
+    for (let i = 0; i < service.serviceTypes.length; i++) {
+      if (i < service.serviceTypes.length - 2)
+        str += (service.serviceTypes[i] + ", ");
+      else if (i === service.serviceTypes.length - 2) { 
+        const firstChar = service.serviceTypes.length === 2 ? "" : ",";
+        str += (service.serviceTypes[i] + firstChar + " and ");
+      }
+      else
+        str += service.serviceTypes[i];
+    }
+
+    return str;
   }
 
   function serviceFors() {
     if (service.for === null || typeof(service.for) === "undefined")
       return "No Types";
     
-    return service.for.map(t => <em>{t + ", "}</em>);
+    let str = "";
+
+    for (let i = 0; i < service.for.length; i++) {
+      if (i < service.for.length - 2)
+        str += (service.for[i] + ", ");
+      else if (i === service.for.length - 2) { 
+        const firstChar = service.for.length === 2 ? "" : ",";
+        str += (service.for[i] + firstChar + " and ");
+      }
+      else
+        str += service.for[i];
+    }
+
+    return str;
   }
 
   function getResource() {
@@ -62,15 +88,20 @@ export default function ServiceView(props) {
       <div className="service-tile">
         <div className="back-button" onClick={() => navigate(-1)}><span><FontAwesomeIcon id="back-caret" icon={faCaretLeft}/></span> Back</div>
         <h1 className="align-left">{service.name}</h1>
+        <a href={"http://" + getResource().url} id="website-button">
+          Visit Website
+        </a>
+        <span>{getResource().phone}</span>
         <h3 className="align-left">Organization</h3>
-          <a href={"http://" + getResource().url}>{getResource().name}</a>
+        <a href={"http://" + getResource().url}>{getResource().name}</a>
+        <br/>
         <h3 className="align-left">Details</h3>
          {description()}
         <h3 className="align-left">Service Description</h3>
         <span>This service provides </span>
-          {serviceTypes()}
-        <span>For </span>
-          {serviceFors()}
+        <em>{serviceTypes()}</em>
+        <span><em> for </em></span>
+        <em>{serviceFors()}</em>
       </div>
     </div>
   );

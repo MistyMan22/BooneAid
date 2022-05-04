@@ -2,7 +2,7 @@
   margin: 2em auto;
   padding: 1.5em;
   background: white;
-  width: 60%;
+  width: 50%;
 }
 
 .align-left {
@@ -24,4 +24,13 @@
 
 #back-caret {
   font-size: .5em;
+}
+
+#website-button {
+  padding: .75em;
+  background-color: blue;
+  border-radius: .5em;
+  color: white;
+  display: inline-block;
+  margin: .5em 2em .5em 0em;
 }
