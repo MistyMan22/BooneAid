@@ -1,4 +1,4 @@
-import react, {useState} from "react";
+import react, {useState, useEffect} from "react";
 import './FilterSelect.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
@@ -15,15 +15,21 @@ export function FilterSelect(props) {
     setItemsVisible(false);
   }
 
+  function getDropdownTopPosition() {
+    let dd = document.getElementById("filter-container-box");
+    let rect = dd.getBoundingClientRect();
+    return rect.bottom;
+  }
+
   return (
     <div className="container-div" onMouseLeave={handleMouseLeave}>
-      <div className="filter-container-box" onClick={handleClick}>
+      <div className="filter-container-box" id="filter-container-box" onClick={handleClick}>
         <span className="filter-name">{props.filterName}</span>
         <span className="caret-icon"><FontAwesomeIcon icon={faCaretDown} /></span>
       </div>
       {
         (itemsVisible) && 
-        <div className="filter-items">
+        <div id="filter-items" style={{top: getDropdownTopPosition()}}>
           <ul>
             {props.filterItems.map(item => <li key={item.id} onClick={() => {
               props.handleItemClicked(item.data);

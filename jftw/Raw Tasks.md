@@ -45,7 +45,7 @@
 	- [x] alphabetize resources and filter lists
 	- [x] Clean up home page
 	- [x] Make external links open in new tabs
-	- [ ] Make a message for when no resource is found
+	- [x] Make a message for when no resource is found
 	- [ ] Fix filter drop down positioning
 	- [ ] Change the font
 	- [ ] Change name to High Country Help
