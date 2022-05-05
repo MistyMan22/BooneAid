@@ -37,11 +37,11 @@
 	- [x] [[ba37]] make search params persist when going back to the search page
 	- [x] [[ba39]] refactor search to only allow one filter at a time
 	- [x] give a key prop to every item in each filter list
-- [ ] Prepare for Launch/TLC
+- [ ] [[ba42]] Prepare for Launch/TLC
 	- [ ] Clean up filter list
 		- [x] [[ba40]] Alphabetize
-		- [ ] make the margins make sense
-		- [ ] make it show up in the right place
+		- [x] [[ba41]] make the margins make sense
+		- [ ] [[ba42]] make it show up in the right place
 	- [ ] alphabetize resources and filter lists
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
 	- [ ] Clean up home page

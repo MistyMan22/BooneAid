@@ -13,22 +13,6 @@
             "mode": "source"
           }
         }
-      },
-      {
-        "id": "d09fe8d65fc9bafc",
-        "type": "leaf",
-        "state": {
-          "type": "graph",
-          "state": {}
-        }
-      },
-      {
-        "id": "6bf40990ca127521",
-        "type": "leaf",
-        "state": {
-          "type": "empty",
-          "state": {}
-        }
       }
     ],
     "direction": "vertical"
@@ -105,6 +89,7 @@
   "active": "4a42f9a4d5a1b2d5",
   "lastOpenFiles": [
     "Raw Tasks.md",
+    "ba41.md",
     "ba40.md",
     "ba1.md",
     "ba38.md",
@@ -112,7 +97,6 @@
     "ex8.md",
     "ex7.md",
     "ba36.md",
-    "ba22.md",
-    "ba35.md"
+    "ba22.md"
   ]
 }
