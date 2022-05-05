@@ -19,7 +19,7 @@
 		- [x] [[ba19]] refine tasks for UI implementation
 		- [x] [[ba21]] figure out page routing
 			- [x] [[ba22]] do page routing tutorial
-- [ ] [[ba20]] Implement Initial UI
+- [x] [[ba20]] Implement Initial UI
 	- [x] [[ba23]] Implement Root Page Component
 		- [x] [[ba24]] Rough Wireframe
 		- [x] [[ba25]] Implement
@@ -35,21 +35,31 @@
 		- [x] [[ba35]] Implement
 	- [x] [[ba36]] finish site skeleton how you see fit
 	- [x] [[ba37]] make search params persist when going back to the search page
-	- [ ] [[ba38]] add in the rest of the resources
-	- [ ] [[ba39]] refactor search to only allow one filter at a time
-	- [ ] update the full view to show the resource info in a sidebar
-	- [ ] add images to all the resources
+	- [x] [[ba39]] refactor search to only allow one filter at a time
+	- [x] give a key prop to every item in each filter list
+- [ ] Prepare for Launch/TLC
+	- [ ] Clean up filter list
+		- [ ] Alphabetize
+		- [ ] make the margins make sense
+		- [ ] make it show up in the right place
+	- [ ] alphabetize resources and filter lists
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
-	- [ ] add a contact page that can send emails to me
+	- [ ] Clean up home page
+	- [ ] Change name to High Country Help
+	- [ ] Add in the rest of the services
+	- [ ] get rid of hard coded type strings
 	- [ ] optimize colors
 	- [ ] figure out how/where to host (consider scalability to ultimately use a database/containers)
 	- [ ] get it hosted, LAUNCH mvp!
+	- [ ] add images to all the resources
+	- [ ] add a contact page that can send emails to me
+	
+	
 
 Unprioritized
-- [ ] get rid of hard coded type strings
-- [ ] backspace gets rid of type filters too 
-- [ ] alphabetize resources and filter lists
-- [ ] give a key prop to every item in each filter list
+
+
+
 - test harness
 	- create a set of tests that test the API endpoints
 	- all subsequent tasks should require tests

@@ -73,7 +73,7 @@ export default function ServiceList(props) {
   return (
     <div id="resource-list">
       {foldedList.map((item) => (
-        <div id="resource-list-row">
+        <div id="resource-list-row" key={item.left.id + item.right.id}>
           <ServiceListItem key={item.left.id} service={item.left}/>
           {(item.right !== null) && <ServiceListItem key={item.right.id} service={item.right}/>}
         </div>

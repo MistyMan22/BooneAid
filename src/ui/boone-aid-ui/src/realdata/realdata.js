@@ -1,7 +1,7 @@
 import { any } from "async"
 
 // types of support
-const healthcare = "Healthcare"
+const healthcare = "Healthcare Services"
 const pregnancySupport = "Pregnancy Support"
 const peripartumSupport = "Peripartum Support"
 const supportGroups = "Support Groups"
@@ -844,7 +844,7 @@ export function getResources() {
   for (let i = 0; i < resources.length; i++)
     resources[i].id = i.toString();
   
-  return resources;
+  return resources.sort();
 }
 
 export function getServices() {
@@ -862,7 +862,7 @@ export function getServices() {
     }
   }
 
-  return services;
+  return services.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function getServedTypes() {
@@ -880,7 +880,7 @@ export function getServedTypes() {
     }
   }
 
-  return types;
+  return types.sort((a, b) => a.data.localeCompare(b.data));
 }
 
 export function getSupportTypes() {
@@ -898,7 +898,7 @@ export function getSupportTypes() {
     }
   }
 
-  return types;
+  return types.sort((a, b) => a.data.localeCompare(b.data));
 }
 
 export function getResourceByName(name) {
