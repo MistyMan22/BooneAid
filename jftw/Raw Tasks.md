@@ -43,13 +43,14 @@
 		- [x] [[ba41]] make the margins make sense
 		- [x] [[ba42]] make it show up in the right place
 	- [x] alphabetize resources and filter lists
-	- [ ] Clean up home page
-	- [ ] Change the font
-	- [ ] Make a message for when no resource is found
-	- [ ] Change name to High Country Help
+	- [x] Clean up home page
 	- [ ] Make external links open in new tabs
-	- [ ] make it work for different viewer widths (mobile, tablet, etc)
+	- [ ] Change the font
+	- [ ] Change name to High Country Help
 	- [ ] Add in the rest of the services
+	- [ ] Make a message for when no resource is found
+	- [ ] Change favicon to site logo
+	- [ ] make it work for different viewer widths (mobile, tablet, etc)
 	- [ ] get rid of hard coded type strings
 	- [ ] optimize colors
 	- [ ] figure out how/where to host (consider scalability to ultimately use a database/containers)

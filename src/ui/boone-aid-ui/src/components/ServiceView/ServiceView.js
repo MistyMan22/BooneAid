@@ -88,12 +88,12 @@ export default function ServiceView(props) {
       <div className="service-tile">
         <div className="back-button" onClick={() => navigate(-1)}><span><FontAwesomeIcon id="back-caret" icon={faCaretLeft}/></span> Back</div>
         <h1 className="align-left">{service.name}</h1>
-        <a href={"http://" + getResource().url} id="website-button">
+        <a href={"http://" + getResource().url} id="website-button" target="_blank">
           Visit Website
         </a>
         <span>{getResource().phone}</span>
         <h3 className="align-left">Organization</h3>
-        <a href={"http://" + getResource().url}>{getResource().name}</a>
+        <a href={"http://" + getResource().url} target="_blank">{getResource().name}</a>
         <br/>
         <h3 className="align-left">Details</h3>
          {description()}
