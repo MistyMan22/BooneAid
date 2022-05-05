@@ -42,6 +42,8 @@
 
 .filter-items ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0.3em;
 }
 
 .filter-items li:hover {

@@ -39,12 +39,14 @@
 	- [x] give a key prop to every item in each filter list
 - [ ] Prepare for Launch/TLC
 	- [ ] Clean up filter list
-		- [ ] Alphabetize
+		- [x] [[ba40]] Alphabetize
 		- [ ] make the margins make sense
 		- [ ] make it show up in the right place
 	- [ ] alphabetize resources and filter lists
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
 	- [ ] Clean up home page
+	- [ ] Change the font
+	- [ ] Make a message for when no resource is found
 	- [ ] Change name to High Country Help
 	- [ ] Add in the rest of the services
 	- [ ] get rid of hard coded type strings
