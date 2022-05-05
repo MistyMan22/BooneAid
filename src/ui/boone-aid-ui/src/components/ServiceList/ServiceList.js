@@ -2,6 +2,7 @@ import react, {useState, useEffect} from "react";
 import "./ServiceList.css";
 import ServiceListItem from "../ServiceListItem/ServiceListItem";
 import { getServices } from "../../realdata/realdata";
+import { filter } from "async";
 
 export default function ServiceList(props) {
   const [services, setServices] = useState([]);
@@ -70,6 +71,20 @@ export default function ServiceList(props) {
 
   const foldedList = getFoldedList();
 
+  function servicesFromFilter() {
+    if (props.filter.services === null || typeof(props.filter.services) === "undefined")
+      return [""];
+
+    return props.filter.services;
+  }
+
+  function forsFromFilter() {
+    if (props.filter.for === null || typeof(props.filter.for) === "undefined")
+      return [""];
+
+    return props.filter.for;
+  }
+
   return (
     <div id="resource-list">
       {foldedList.map((item) => (
@@ -78,6 +93,10 @@ export default function ServiceList(props) {
           {(item.right !== null) && <ServiceListItem key={item.right.id} service={item.right}/>}
         </div>
       ))}
+      {(filteredServices.length === 0) && 
+      <p id="none-found-text"><strong>
+        No services found with <em>{servicesFromFilter()[0]}</em> for <em>{forsFromFilter()[0]}</em>
+        </strong></p>}
     </div>
   )
 }

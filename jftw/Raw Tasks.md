@@ -44,11 +44,12 @@
 		- [x] [[ba42]] make it show up in the right place
 	- [x] alphabetize resources and filter lists
 	- [x] Clean up home page
-	- [ ] Make external links open in new tabs
+	- [x] Make external links open in new tabs
+	- [ ] Make a message for when no resource is found
+	- [ ] Fix filter drop down positioning
 	- [ ] Change the font
 	- [ ] Change name to High Country Help
 	- [ ] Add in the rest of the services
-	- [ ] Make a message for when no resource is found
 	- [ ] Change favicon to site logo
 	- [ ] make it work for different viewer widths (mobile, tablet, etc)
 	- [ ] get rid of hard coded type strings
