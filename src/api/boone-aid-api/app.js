@@ -10,12 +10,9 @@ var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" 
 
 var app = express();
 
-// username: library-app-898
-// password: 9cYvxNZGJaed8Sj
-// connection string: mongodb+srv://library-app-898:9cYvxNZGJaed8Sj@cluster0.k2gf0.mongodb.net/BooneAid?retryWrites=true&w=majority
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://library-app-898:9cYvxNZGJaed8Sj@cluster0.k2gf0.mongodb.net/BooneAid?retryWrites=true&w=majority';
+var mongoDB = '';
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
