@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './ServiceSearchControl.css';
-import { getServedTypes, getSupportTypes } from '../../realdata/realdata';
+import { getServedTypes, getServices, getSupportTypes } from '../../realdata/realdata';
 import { useSearchParams } from 'react-router-dom';
 import { FilterSelect } from '../FilterSelect/FilterSelect';
 import FilterTile from '../FilterTile/FilterTile';
@@ -12,10 +12,19 @@ export default function ServiceSearchControl(props) {
   const [supportForTypes, setSupportForTypes] = useState([]);
   const [filters, setFilters] = useSearchParams();
   const [keyword, setKeyword] = useState("");
+  const [displayedSupportTypes, setDisplayedSupportTypes] = useState([]);
+  const [displayedForTypes, setDisplayedForTypes] = useState([]);
 
   useEffect(() => {
     signalFilterUpdate();
   }, [filters]);
+
+
+  useEffect(() => {
+    populateSupportForTypes();
+    populateSupportTypes();
+    setKeyword(getKeywordFilter());
+  }, []);
 
   function hasKeywordFilter() {
     return getKeywordFilter().length > 0;
@@ -106,72 +115,22 @@ export default function ServiceSearchControl(props) {
     let types = getSupportTypes();
     types.push("Any Service");
     setSupportTypes(types);
+    setDisplayedSupportTypes(types);
   }
 
   function populateSupportForTypes() {
     let types = getServedTypes();
     // anyone in need is already a type
     setSupportForTypes(types);
+    setDisplayedForTypes(types);
   }
 
   function handleForClicked(item) {
-    //let newForFilters = [...getForFilters()];
-    let newForFilters = [];
-
-    if (newForFilters.includes(item))
-      return;
-
-    if (item === "Anyone in Need")
-      newForFilters = [];
-    else
-      newForFilters = newForFilters.filter(item => item !== "Anyone in Need");
-
-    newForFilters.push(item);
-    setForFilters(arrayToParamString(newForFilters));
+    setForFilters(arrayToParamString([item]));
   }
 
   function handleTypeClicked(item) {
-    //let newTypeFilters = [...getTypeFilters()];
-    let newTypeFilters = []
-
-    if (newTypeFilters.includes(item))
-      return;
-
-    if (item === "Any Service")
-      newTypeFilters = [];
-    else
-      newTypeFilters = newTypeFilters.filter(item => item !== "Any Service");
-
-    newTypeFilters.push(item);
-    setTypeFilters(arrayToParamString(newTypeFilters));
-  }
-
-  function onTypeTileClosed(name) {
-    let newTypeFilters = [];
-
-    for (let item of getTypeFilters()) {
-      if (item !== name)
-        newTypeFilters.push(item);
-    }
-
-    if (newTypeFilters.length === 0)
-      newTypeFilters.push("Any Service");
-    
-    setTypeFilters(arrayToParamString(newTypeFilters));
-  }
-
-  function onForTileClosed(name) {
-    let newForFilters = [];
-
-    for (let item of getForFilters()) {
-      if (item !== name)
-        newForFilters.push(item);
-    }
-    
-    if (newForFilters.length === 0)
-      newForFilters.push("Anyone in Need");
-
-    setForFilters(arrayToParamString(newForFilters));
+    setTypeFilters(arrayToParamString([item]));
   }
 
   function handleKeyPress(event) {
@@ -187,6 +146,8 @@ export default function ServiceSearchControl(props) {
 
   function handleClearButtonClicked() {
     setFilters({keywordFilter: "", forFilters: "Anyone in Need", typeFilters: "Any Service"});
+    setDisplayedForTypes(supportForTypes);
+    setDisplayedSupportTypes(supportTypes);
     setKeyword("");
   }
 
@@ -194,19 +155,62 @@ export default function ServiceSearchControl(props) {
     setKeyword(event.target.value);
   }
 
-  useEffect(() => {
-    populateSupportForTypes();
-    populateSupportTypes();
-    setKeyword(getKeywordFilter());
-  }, []);
+  function filteredSupportTypes() {
+    let fors = getForFilters()
+    console.log("?")
+    if (fors[0] === "Anyone in Need")
+      return supportTypes;
+
+    let services = getServices();
+    let fst = [{data: "Any Service", id: 0}];
+    let i = 1; 
+
+    for (let service of services) {
+      if (service.for.includes(fors[0])) {
+        for (let type of service.serviceTypes) {
+          let obj = {data: type, id: i++};
+          if (fst.filter(o => o.data === type).length === 0)
+            fst.push(obj);
+        }
+      }
+    }
+
+    console.log(fst.toString())
+
+    return fst;
+  }
+
+  function filteredFors() {
+    let types = getTypeFilters();
+    if (types[0] === "Any Service")
+      return supportForTypes;
+
+    let services = getServices();
+    let ff = [{data: "Anyone in Need", id: 0}];
+    let i = 1;
+
+    for (let service of services) {
+      if (service.serviceTypes.includes(types[0])) {
+        for (let f of service.for) {
+          let obj = {data: f, id: i++};
+          if (ff.filter(o => o.data === f).length === 0)
+            ff.push(obj);
+        }
+      }
+    }
+
+    console.log(ff.toString());
+
+    return ff;
+  }
 
   return (
     <div id="search-complex-container">
       <div id="search-container">
         <p>I'm Looking For:</p>
-        <FilterSelect filterItems={supportTypes} filterName={getTypeFilters()[0]} handleItemClicked={handleTypeClicked}/>
+        <FilterSelect filterItems={displayedSupportTypes} filterName={getTypeFilters()[0]} handleItemClicked={handleTypeClicked}/>
         <p>For:</p>
-        <FilterSelect filterItems={supportForTypes} filterName={getForFilters()[0]} handleItemClicked={handleForClicked}/>
+        <FilterSelect filterItems={displayedForTypes} filterName={getForFilters()[0]} handleItemClicked={handleForClicked}/>
         <p>With Keyword:</p>
         <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
         {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
