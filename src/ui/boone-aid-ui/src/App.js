@@ -14,12 +14,12 @@ function App() {
       <Router>
       <MenuBar/>
         <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='about' element={<AboutPage/>}/>
-          <Route path='resources' element={<SearchPage/>}/>
-          <Route path='services' element={<ServiceSearchPage/>}/>
-          <Route path='resources/:resourceid' element={<ResourceView/>}/>
-          <Route path='services/:serviceid' element={<ServiceView/>}/>
+          <Route path='BooneAid/' element={<HomePage/>}/>
+          <Route path='BooneAid/about' element={<AboutPage/>}/>
+          <Route path='BooneAid/resources' element={<SearchPage/>}/>
+          <Route path='BooneAid/services' element={<ServiceSearchPage/>}/>
+          <Route path='BooneAid/resources/:resourceid' element={<ResourceView/>}/>
+          <Route path='BooneAid/services/:serviceid' element={<ServiceView/>}/>
         </Routes>
       </Router>
     </div>

@@ -5,7 +5,7 @@
 
 #search-complex-container p {
   font-size: 1.2em;
-  margin: 0px !important;
+  font-weight: bold;
 }
 
 #filter-list-container {
