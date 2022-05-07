@@ -14,12 +14,12 @@ function App() {
       <Router>
       <MenuBar/>
         <Routes>
-          <Route path='BooneAid/' element={<HomePage/>}/>
-          <Route path='BooneAid/about' element={<AboutPage/>}/>
-          <Route path='BooneAid/resources' element={<SearchPage/>}/>
-          <Route path='BooneAid/services' element={<ServiceSearchPage/>}/>
-          <Route path='BooneAid/resources/:resourceid' element={<ResourceView/>}/>
-          <Route path='BooneAid/services/:serviceid' element={<ServiceView/>}/>
+          <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage/>}/>
+          <Route path={process.env.PUBLIC_URL + '/about'} element={<AboutPage/>}/>
+          <Route path={process.env.PUBLIC_URL + '/resources'} element={<SearchPage/>}/>
+          <Route path={process.env.PUBLIC_URL + '/services'} element={<ServiceSearchPage/>}/>
+          <Route path={process.env.PUBLIC_URL + '/resources/:resourceid'} element={<ResourceView/>}/>
+          <Route path={process.env.PUBLIC_URL + '/services/:serviceid'} element={<ServiceView/>}/>
         </Routes>
       </Router>
     </div>

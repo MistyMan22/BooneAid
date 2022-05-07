@@ -16,7 +16,7 @@ export default function MenuBar() {
   return (
     <nav id="menu-bar">
       <div id='menu-section-left'>
-        <Link className="quiet-link" to='BooneAid/'>
+        <Link className="quiet-link" to={process.env.PUBLIC_URL + '/'}>
           <div className='menu-button'>
             <span><Logo height={23} /></span>
             <span id='logo-text'>High Country Help</span>
@@ -24,12 +24,12 @@ export default function MenuBar() {
         </Link>
       </div>
       <div id='menu-section-right'>
-        <Link className="quiet-link" to='BooneAid/'>
+        <Link className="quiet-link" to={process.env.PUBLIC_URL + '/'}>
           <div className='menu-button'>
             Home
           </div>
         </Link>
-        <Link className="quiet-link" to='BooneAid/services'>
+        <Link className="quiet-link" to={process.env.PUBLIC_URL + '/services'}>
           <div className='menu-button'>
             Resources
           </div>
@@ -41,12 +41,12 @@ export default function MenuBar() {
       {(mobileMenuVisible) && (
         <div id="mobile-menu">
           <div id="exit-mobile-menu" onClick={() => setMobileMenuVisible(false)}>X</div>
-          <Link className="quiet-link" to='BooneAid/' onClick={() => setMobileMenuVisible(false)}>
+          <Link className="quiet-link" to={process.env.PUBLIC_URL + '/'} onClick={() => setMobileMenuVisible(false)}>
             <div className='menu-button'>
               Home
             </div>
           </Link>
-          <Link className="quiet-link" to='BooneAid/services' onClick={() => setMobileMenuVisible(false)}>
+          <Link className="quiet-link" to={process.env.PUBLIC_URL + '/services'} onClick={() => {setMobileMenuVisible(false); console.log("hi"); console.log(process.env.PUBLIC_URL)}}>
             <div className='menu-button'>
               Resources
             </div>
