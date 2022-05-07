@@ -2,3 +2,11 @@ body {
   width: 100%;
   background-color: white;
 }
+
+.quiet-link:link,
+.quiet-link:visited,
+.quiet-link:hover,
+.quiet-link:active { 
+  text-decoration: none; 
+  color: black;
+}

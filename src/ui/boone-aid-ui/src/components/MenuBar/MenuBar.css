@@ -23,13 +23,6 @@
   margin-left: -.2em;
 }
 
-.quiet-link:link,
-.quiet-link:visited,
-.quiet-link:hover,
-.quiet-link:active { 
-  text-decoration: none; 
-}
-
 #daburger {
   display: inline-flex;
   align-items: center;

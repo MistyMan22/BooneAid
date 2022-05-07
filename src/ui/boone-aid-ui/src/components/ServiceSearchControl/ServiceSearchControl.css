@@ -6,6 +6,7 @@
 #search-complex-container p {
   font-size: 1.2em;
   font-weight: bold;
+  margin: 0px !important;
 }
 
 #filter-list-container {
@@ -24,6 +25,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .container-item {
