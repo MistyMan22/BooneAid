@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: row;
   place-content: space-between;
-  font-size: 20px;
+  font-size: 1.1em;
   padding: .2em;
+  height: 40px;
 }
 
 .menu-button {
@@ -22,18 +23,69 @@
   margin-left: 1em;
 }
 
-a:link { 
+.quiet-link:link,
+.quiet-link:visited,
+.quiet-link:hover,
+.quiet-link:active { 
   text-decoration: none; 
 }
 
-a:visited { 
-  text-decoration: none; 
+#daburger {
+  display: inline;
+  color: white;
+  font-size: 2em;
+  margin-right: .4em;
 }
 
-a:hover { 
-  text-decoration: none; 
+#daburger:hover {
+  cursor: pointer;
 }
 
-a:active { 
-  text-decoration: none; 
+#menu-section {
+  display: none;
+}
+
+#mobile-menu {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #444;
+  height: 100vh;
+  padding: 1em;
+}
+
+#mobile-menu a div {
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+    height: auto;
+}
+
+#exit-mobile-menu {
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+  margin-top: .2em;
+  margin-left: .2em;
+}
+
+#exit-mobile-menu:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 450px) {
+  #menu-section {
+    display: inline;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  #daburger {
+    display: none;
+  }
 }
