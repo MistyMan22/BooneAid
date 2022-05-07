@@ -13,35 +13,27 @@ export default function MenuBar() {
     setMobileMenuVisible(!mobileMenuVisible);
   }
 
-  const homeLink = (
+  return (
+    <nav id="menu-bar">
+      <div id='menu-section-left'>
+        <Link className="quiet-link" to='/'>
+          <div className='menu-button'>
+            <span><Logo height={23} /></span>
+            <span id='logo-text'>BooneAid</span>
+          </div>
+        </Link>
+      </div>
+      <div id='menu-section-right'>
         <Link className="quiet-link" to='/'>
           <div className='menu-button'>
             Home
           </div>
         </Link>
-  )
-
-  const resourcesLink = (
-    <Link className="quiet-link" to='services'>
-      <div className='menu-button'>
-        Resources
-      </div>
-    </Link>
-  )
-
-  return (
-    <nav id="menu-bar">
-      <div className='menu-section'>
-        <Link className="quiet-link" to='/'>
+        <Link className="quiet-link" to='services'>
           <div className='menu-button'>
-            <span><Logo/></span>
-            <span id='logo-text'>BooneAid</span>
+            Resources
           </div>
         </Link>
-      </div>
-      <div id='menu-section'>
-        {homeLink}
-        {resourcesLink}
       </div>
       <div id="daburger" onClick={() => setMobileMenuVisible(true)}>
         <FontAwesomeIcon icon={faBars}/>
@@ -49,8 +41,16 @@ export default function MenuBar() {
       {(mobileMenuVisible) && (
         <div id="mobile-menu">
           <div id="exit-mobile-menu" onClick={() => setMobileMenuVisible(false)}>X</div>
-          {homeLink}
-          {resourcesLink}
+          <Link className="quiet-link" to='/' onClick={() => setMobileMenuVisible(false)}>
+            <div className='menu-button'>
+              Home
+            </div>
+          </Link>
+          <Link className="quiet-link" to='services' onClick={() => setMobileMenuVisible(false)}>
+            <div className='menu-button'>
+              Resources
+            </div>
+          </Link>
         </div>
       )}
     </nav>

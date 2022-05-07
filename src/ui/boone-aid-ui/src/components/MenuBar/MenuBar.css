@@ -20,7 +20,7 @@
 }
 
 #logo-text {
-  margin-left: 1em;
+  margin-left: -.2em;
 }
 
 .quiet-link:link,
@@ -41,8 +41,12 @@
   cursor: pointer;
 }
 
-#menu-section {
+#menu-section-right {
   display: none;
+}
+
+#menu-section-left {
+  margin-left: -1.5em;
 }
 
 #mobile-menu {

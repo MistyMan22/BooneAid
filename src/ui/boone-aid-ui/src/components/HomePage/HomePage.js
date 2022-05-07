@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <div id='home-page'>
       <div id='main-display'>
-        {/* <img src={require('../../images/Viaduct.png')} alt='price lake'/> */}
         <div id="hero">
           <Logo className="hero-logo" stroke="black" width={300} height={120}/>
           <p id='display-text'>Welcome to BooneAid</p>

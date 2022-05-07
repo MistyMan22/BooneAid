@@ -6,6 +6,7 @@
 }
 
 #hero {
+  margin: -6.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -56,13 +57,13 @@
 
 @media only screen and (min-width: 620px) {
 
-#display-text {
-	font-size: 3em;
-  width: 600px;
-}
+  #display-text {
+    font-size: 3em;
+    width: 600px;
+  }
 
-#secondary-text {
-  font-size: 1.5em;
-  width: 600px;
-}
+  #secondary-text {
+    font-size: 1.5em;
+    width: 600px;
+  }
 }
