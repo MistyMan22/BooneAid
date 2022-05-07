@@ -7,7 +7,6 @@
 
 #hero {
   display: flex;
-  margin-top: -12em;
   justify-content: center;
   flex-direction: column;
 }
@@ -20,7 +19,7 @@
 	font-size: 3em;
 	font-weight: bold;
   color: black;
-  width: 600px;
+  width: 90vw;
   margin: auto;
   text-align: center;
 }
@@ -28,7 +27,7 @@
 #secondary-text {
   font-size: 1.5em;
   color: black;
-  width: 600px;
+  width: 90vw;
   text-align: center;
   margin: 0.5em auto;
   margin-top: 0.5em;
@@ -53,4 +52,17 @@
 
 #resource-button:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 620px) {
+
+#display-text {
+	font-size: 3em;
+  width: 600px;
+}
+
+#secondary-text {
+  font-size: 1.5em;
+  width: 600px;
+}
 }
