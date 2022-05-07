@@ -16,14 +16,14 @@ export function FilterSelect(props) {
   }
 
   function getDropdownTopPosition() {
-    let dd = document.getElementById("filter-container-box");
+    let dd = document.getElementById("filter-container-box-" + props.uid);
     let rect = dd.getBoundingClientRect();
     return rect.bottom;
   }
 
   return (
     <div className="container-div" onMouseLeave={handleMouseLeave}>
-      <div className="filter-container-box" id="filter-container-box" onClick={handleClick}>
+      <div className="filter-container-box" id={"filter-container-box-" + props.uid} onClick={handleClick}>
         <span className="filter-name">{props.filterName}</span>
         <span className="caret-icon"><FontAwesomeIcon icon={faCaretDown} /></span>
       </div>

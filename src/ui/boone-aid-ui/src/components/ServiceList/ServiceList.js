@@ -87,7 +87,7 @@ export default function ServiceList(props) {
 
   return (
     <div id="resource-list">
-      {foldedList.map((item) => (
+      {/* {foldedList.map((item) => (
         <div id="resource-list-row" key={item.left.id + '-' + (item.right === null ? "" : item.right.id)}>
           <ServiceListItem key={item.left.id} service={item.left}/>
           {(item.right !== null) && <ServiceListItem key={item.right.id} service={item.right}/>}
@@ -96,7 +96,7 @@ export default function ServiceList(props) {
       {(filteredServices.length === 0) && 
       <p id="none-found-text"><strong>
         No services found with <em>{servicesFromFilter()[0]}</em> for <em>{forsFromFilter()[0]}</em>
-        </strong></p>}
+        </strong></p>} */}
     </div>
   )
 }

@@ -207,13 +207,19 @@ export default function ServiceSearchControl(props) {
   return (
     <div id="search-complex-container">
       <div id="search-container">
-        <p>I'm Looking For:</p>
-        <FilterSelect filterItems={displayedSupportTypes} filterName={getTypeFilters()[0]} handleItemClicked={handleTypeClicked}/>
-        <p>For:</p>
-        <FilterSelect filterItems={displayedForTypes} filterName={getForFilters()[0]} handleItemClicked={handleForClicked}/>
-        <p>With Keyword:</p>
-        <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
-        {(!filterEmpty()) && <div id="clear-search-button" onClick={handleClearButtonClicked}>Clear Search</div>}
+        <div className="search-section">
+          <p>I'm Looking For:</p>
+          <FilterSelect filterItems={displayedSupportTypes} filterName={getTypeFilters()[0]} uid={1} handleItemClicked={handleTypeClicked}/>
+        </div>
+        <div className="search-section">
+          <p>For:</p>
+          <FilterSelect filterItems={displayedForTypes} filterName={getForFilters()[0]} uid={2} handleItemClicked={handleForClicked}/>
+        </div>
+        <div className="search-section">
+          <p>With Keyword:</p>
+          <input className="container-item" type="text" name="search" placeholder="Enter Keyword" value={keyword} onKeyPress={handleKeyPress} onKeyDown={handleKeyDown} onChange={updateKeyword} required/>
+        </div>
+          {(!filterEmpty()) && <div id="clear-search-button" className="search-section" onClick={handleClearButtonClicked}>Clear Search</div>}
       </div>
     </div>
   );

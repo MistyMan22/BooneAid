@@ -41,6 +41,8 @@
   max-height: 20em;
   overflow-y: scroll;
   border-radius: 5px;
+  font-size: 1.3em;
+  width: 180px;
 }
 
 #filter-items ul {
@@ -56,4 +58,11 @@
 #filter-items li:hover {
   background-color: #D8D8D8;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 450px) {
+  #search-complex-container {
+    font-size: 1em;
+    width: auto;
+  }
 }
