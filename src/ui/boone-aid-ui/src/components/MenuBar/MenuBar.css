@@ -31,7 +31,8 @@
 }
 
 #daburger {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   color: white;
   font-size: 2em;
   margin-right: .4em;
