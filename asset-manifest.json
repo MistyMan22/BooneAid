@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BooneAid/static/css/main.6fb5e306.css",
-    "main.js": "/BooneAid/static/js/main.081dd7fd.js",
+    "main.js": "/BooneAid/static/js/main.28473490.js",
     "index.html": "/BooneAid/index.html",
     "static/media/Logo.svg": "/BooneAid/static/media/Logo.c9a7ecb1d3f3b7806187dd27efedbdbe.svg",
     "main.6fb5e306.css.map": "/BooneAid/static/css/main.6fb5e306.css.map",
-    "main.081dd7fd.js.map": "/BooneAid/static/js/main.081dd7fd.js.map"
+    "main.28473490.js.map": "/BooneAid/static/js/main.28473490.js.map"
   },
   "entrypoints": [
     "static/css/main.6fb5e306.css",
-    "static/js/main.081dd7fd.js"
+    "static/js/main.28473490.js"
   ]
 }
