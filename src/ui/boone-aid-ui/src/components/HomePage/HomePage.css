@@ -1,19 +1,17 @@
 #main-display {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
 #hero {
-  margin: -8.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .hero-logo {
-  margin: 3em auto 1.5em auto;
+  margin: 1em;
 }
 
 #display-text {
@@ -60,12 +58,8 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 620px) {
 
-  #display-text {
-    font-size: 3em;
-    width: 600px;
-  }
+@media only screen and (min-width: 620px) {
 
   #secondary-text {
     font-size: 1.5em;
@@ -79,5 +73,12 @@
 
   .hero-logo {
     margin: 3em auto;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  #display-text {
+    font-size: 3em;
+    width: 800px;
   }
 }
