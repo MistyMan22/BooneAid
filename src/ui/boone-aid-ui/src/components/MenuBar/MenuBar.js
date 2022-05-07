@@ -19,7 +19,7 @@ export default function MenuBar() {
         <Link className="quiet-link" to='/'>
           <div className='menu-button'>
             <span><Logo height={23} /></span>
-            <span id='logo-text'>BooneAid</span>
+            <span id='logo-text'>High Country Help</span>
           </div>
         </Link>
       </div>

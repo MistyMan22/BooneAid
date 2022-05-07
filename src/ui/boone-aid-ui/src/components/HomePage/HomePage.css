@@ -6,14 +6,14 @@
 }
 
 #hero {
-  margin: -6.5em;
+  margin: -8.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .hero-logo {
-  margin: 3em auto;
+  margin: 3em auto 1.5em auto;
 }
 
 #display-text {
@@ -25,13 +25,18 @@
   text-align: center;
 }
 
-#secondary-text {
+#secondary-text,
+#tertiary-text {
   font-size: 1.5em;
   color: black;
   width: 90vw;
   text-align: center;
   margin: 0.5em auto;
   margin-top: 0.5em;
+}
+
+#tertiary-text {
+  font-size: 1.2em;
 }
 
 #resource-button {
@@ -65,5 +70,14 @@
   #secondary-text {
     font-size: 1.5em;
     width: 600px;
+  }
+
+  #tertiary-text {
+    font-size: 1em;
+    width: 600px;
+  }
+
+  .hero-logo {
+    margin: 3em auto;
   }
 }

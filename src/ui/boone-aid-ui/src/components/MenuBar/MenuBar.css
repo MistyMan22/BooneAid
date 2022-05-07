@@ -80,8 +80,8 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 450px) {
-  #menu-section {
+@media only screen and (min-width: 470px) {
+  #menu-section-right {
     display: inline;
   }
 
