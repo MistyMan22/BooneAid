@@ -14,7 +14,7 @@ export default function HomePage() {
           <Link to='services' id='resource-button'>
             Search Resources
           </Link>
-          <p id='tertiary-text'> Serving Ashe, Avery, and Watauga Counties</p>
+          <p id='tertiary-text'> Serving Ashe, Avery, and Watauga Counties in North Carolina</p>
         </div>
       </div>
     </div>

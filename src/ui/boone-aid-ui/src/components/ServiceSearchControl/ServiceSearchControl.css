@@ -4,9 +4,9 @@
 }
 
 #search-complex-container p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
-  margin: 0px !important;
+  margin: 0em 0em 0em .5em !important;
 }
 
 #filter-list-container {
