@@ -61,7 +61,7 @@
 }
 
 @media only screen and (min-width: 450px) {
-  #search-complex-container {
+  #filter-items {
     font-size: 1em;
     width: auto;
   }
