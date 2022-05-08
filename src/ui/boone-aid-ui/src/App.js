@@ -12,10 +12,10 @@ function App() {
       <Router>
       <MenuBar/>
         <Routes>
-          <Route path={process.env.PUBLIC_URL + '/'} element={<HomePage/>}/>
-          <Route path={process.env.PUBLIC_URL + '/about'} element={<AboutPage/>}/>
-          <Route path={process.env.PUBLIC_URL + '/services'} element={<ServiceSearchPage/>}/>
-          <Route path={process.env.PUBLIC_URL + '/services/:serviceid'} element={<ServiceView/>}/>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/about' element={<AboutPage/>}/>
+          <Route path='/services' element={<ServiceSearchPage/>}/>
+          <Route path='/services/:serviceid' element={<ServiceView/>}/>
         </Routes>
       </Router>
     </div>
