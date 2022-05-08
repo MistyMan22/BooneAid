@@ -9,7 +9,7 @@ import ServiceView from './components/ServiceView/ServiceView'
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       <MenuBar/>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
